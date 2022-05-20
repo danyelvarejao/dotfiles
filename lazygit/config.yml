@@ -1,0 +1,6 @@
+gui:
+  showCommandLog: false
+  showFileTree: false
+  theme:
+    selectedLineBgColor:
+      - reverse # set to `default` to have no background colour
