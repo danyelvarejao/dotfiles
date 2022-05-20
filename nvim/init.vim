@@ -6,6 +6,7 @@ call plug#begin()
     Plug 'ryanoasis/vim-devicons'
     Plug 'sheerun/vim-polyglot'
     Plug 'preservim/nerdtree'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
