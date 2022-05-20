@@ -7,6 +7,7 @@ call plug#begin()
     Plug 'sheerun/vim-polyglot'
     Plug 'preservim/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
