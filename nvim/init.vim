@@ -1,13 +1,13 @@
 " Plugins """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
-    Plug 'marko-cerovac/material.nvim'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'preservim/nerdtree'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'marko-cerovac/material.nvim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'preservim/nerdtree'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -36,20 +36,20 @@ filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 
 if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-endif
-
-if (has("nvim"))
-    highlight Normal guibg=NONE ctermbg=NONE
-    highlight EndOfBuffer guibg=NONE ctermbg=NONE
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	set termguicolors
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Themes """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:material_style = 'deep ocean'
 colorscheme material
+
+if (has("nvim"))
+	highlight Normal guibg=NONE ctermbg=NONE
+	highlight EndOfBuffer guibg=NONE ctermbg=NONE
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Remaps """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
