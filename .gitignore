@@ -1,1 +1,4 @@
 lazygit/state.yml
+
+nvim/backups
+nvim/undos
