@@ -30,7 +30,7 @@ set backup
 set backupskip=/tmp/*
 set writebackup
 
-" Ungo
+" Undo
 set undodir=~/.config/nvim/undos
 
 " Colors
