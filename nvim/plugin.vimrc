@@ -1,0 +1,10 @@
+call plug#begin()
+	Plug 'marko-cerovac/material.nvim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'preservim/nerdtree'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+call plug#end()
