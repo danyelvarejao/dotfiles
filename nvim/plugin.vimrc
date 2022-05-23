@@ -1,4 +1,4 @@
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 	" Themes
 	Plug 'marko-cerovac/material.nvim'
 
