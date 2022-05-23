@@ -1,3 +1,6 @@
+" Global
+let mapleader = "'"
+
 syntax on            " Enable syntax highlight
 set relativenumber   " Enable relative number
 set nu               " Enable line numbers
@@ -15,13 +18,22 @@ set scrolloff=8      " Minimum number of lines to keep above and below the curso
 set cmdheight=1      " Give more space for displaying messages
 set updatetime=100   " Time in miliseconds to consider the changes
 set encoding=utf-8   " The encoding should be utf-8 to activate the font icons
-set nobackup         " No backup files
-set nowritebackup    " No backup files
 set autoread         " Update vim after file update from outside
 filetype on          " Detect and set the filetype option and trigger the FileType Event
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 
+" Backup
+set backupcopy=yes
+set backupdir=~/.config/nvim/backups
+set backup
+set backupskip=/tmp/*
+set writebackup
+
+" Ungo
+set undodir=~/.config/nvim/undos
+
+" Colors
 if exists('+termguicolors')
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
