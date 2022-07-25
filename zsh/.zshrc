@@ -115,6 +115,8 @@ alias projects="cd ~/projects"
 alias lg="lazygit"
 alias vim="nvim"
 
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
