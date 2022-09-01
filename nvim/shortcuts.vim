@@ -34,3 +34,6 @@ nnoremap <c-p> :Files<CR>
 
 " Goto buffer (Ctrl + O) fzf plugin
 nnoremap <c-o> :Buffers<CR>
+
+" Nerd Tree
+nnoremap <C-e> :NERDTreeToggle<CR>

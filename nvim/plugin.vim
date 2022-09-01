@@ -43,4 +43,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 	" Emmet (HTML)
 	Plug 'mattn/emmet-vim'
+
+	" Nerd Tree
+	Plug 'preservim/nerdtree'
 call plug#end()
