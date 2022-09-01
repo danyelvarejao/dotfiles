@@ -1,5 +1,5 @@
 " Global
-let mapleader = "'"
+let mapleader = " "
 
 syntax on            " Enable syntax highlight
 set relativenumber   " Enable relative number
