@@ -22,3 +22,6 @@ map <Leader>to :tabonly<CR>
 map <Leader>tc :tabclose<CR>
 map <Leader>tm :tabmove
 map <Leader>t<Leader> :tabnext
+
+" Goto file (CTRL + P) fzf plugin
+nnoremap <c-p> :Files<CR>
