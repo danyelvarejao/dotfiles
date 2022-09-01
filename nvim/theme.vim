@@ -1,5 +1,4 @@
-let g:material_style = 'deep ocean'
-colorscheme material
+set background=dark
 
 if (has("nvim"))
 	highlight Normal guibg=NONE ctermbg=NONE
