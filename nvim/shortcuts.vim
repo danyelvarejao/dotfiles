@@ -11,10 +11,10 @@ map <Leader>l :bnext<CR>
 map <Leader>h :bprevious<CR>
 
 " Move a line of text using ALT+[jk]
-nmap <M-j> mz:m+<CR>`z
-nmap <M-k> mz:m-2<CR>`z
-vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
+nmap <A-j> mz:m+<CR>`z
+nmap <A-k> mz:m-2<CR>`z
+vmap <A-j> :m'>+<CR>`<my`>mzgv`yo`z
+vmap <A-k> :m'<-2<CR>`>my`<mzgv`yo`z
 
 " Useful mappings for managing tabs
 map <Leader>tn :tabnew<CR>
