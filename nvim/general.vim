@@ -15,7 +15,7 @@ set incsearch        " Incremental search
 set ignorecase       " Ingore case in search
 set hlsearch         " Highlight search results
 set smartcase        " Consider case if there is a upper case character
-set scrolloff=8      " Minimum number of lines to keep above and below the cursor
+set scrolloff=12     " Minimum number of lines to keep above and below the cursor
 set cmdheight=1      " Give more space for displaying messages
 set updatetime=100   " Time in miliseconds to consider the changes
 set encoding=utf-8   " The encoding should be utf-8 to activate the font icons
