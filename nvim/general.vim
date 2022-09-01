@@ -1,5 +1,5 @@
 " Global
-let mapleader=" "
+let mapleader = "\<Space>"
 
 syntax on            " Enable syntax highlight
 set relativenumber   " Enable relative number
@@ -13,12 +13,15 @@ set smartindent      " Automatically inserts one extra level of indentation in s
 set hidden           " Hides the current buffer when a new file is openned
 set incsearch        " Incremental search
 set ignorecase       " Ingore case in search
+set hlsearch         " Highlight search results
 set smartcase        " Consider case if there is a upper case character
 set scrolloff=8      " Minimum number of lines to keep above and below the cursor
 set cmdheight=1      " Give more space for displaying messages
 set updatetime=100   " Time in miliseconds to consider the changes
 set encoding=utf-8   " The encoding should be utf-8 to activate the font icons
 set autoread         " Update vim after file update from outside
+set ruler            " Always show current position
+
 filetype on          " Detect and set the filetype option and trigger the FileType Event
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
