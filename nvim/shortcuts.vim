@@ -15,3 +15,10 @@ nmap <M-j> mz:m+<CR>`z
 nmap <M-k> mz:m-2<CR>`z
 vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
+
+" Useful mappings for managing tabs
+map <Leader>tn :tabnew<CR>
+map <Leader>to :tabonly<CR>
+map <Leader>tc :tabclose<CR>
+map <Leader>tm :tabmove
+map <Leader>t<Leader> :tabnext
