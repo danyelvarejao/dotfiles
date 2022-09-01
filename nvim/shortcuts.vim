@@ -5,13 +5,13 @@ nmap <Leader>x :x<CR>
 nmap <Leader>a :q!<CR>
 
 " Move to next buffer
-map <Leader>l :bnext<cr>
+map <Leader>l :bnext<CR>
 
 " Move to previous buffer
-map <Leader>h :bprevious<cr>
+map <Leader>h :bprevious<CR>
 
 " Move a line of text using ALT+[jk]
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nmap <M-j> mz:m+<CR>`z
+nmap <M-k> mz:m-2<CR>`z
+vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
