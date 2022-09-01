@@ -17,7 +17,7 @@ set hlsearch         " Highlight search results
 set smartcase        " Consider case if there is a upper case character
 set scrolloff=12     " Minimum number of lines to keep above and below the cursor
 set cmdheight=1      " Give more space for displaying messages
-set updatetime=100   " Time in miliseconds to consider the changes
+set updatetime=300   " Time in miliseconds to consider the changes
 set encoding=utf-8   " The encoding should be utf-8 to activate the font icons
 set autoread         " Update vim after file update from outside
 set ruler            " Always show current position
@@ -27,11 +27,8 @@ filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 
 " Backup
-set backupcopy=yes
-set backupdir=~/.config/nvim/backups
-set backup
-set backupskip=/tmp/*
-set writebackup
+set nobackup
+set nowritebackup
 
 " Undo
 set undodir=~/.config/nvim/undos
