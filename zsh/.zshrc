@@ -115,6 +115,7 @@ alias projects="cd ~/projects"
 alias lg="lazygit"
 alias vim="nvim"
 alias v="nvim"
+alias vimconfig="cd ~/.config/nvim"
 
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
