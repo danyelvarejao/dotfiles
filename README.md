@@ -13,6 +13,8 @@ ssh-keygen -t ed25519 -C "<YOUR_EMAIL>"
 ## Adicionando chave ao github
 ```
 cd ~/.ssh
+```
+```
 cat id_ed*.pub
 ```
 
@@ -24,6 +26,8 @@ cat id_ed*.pub
 - Clique em Add SSH Key
 ```
 git config --global user.name "<YOUR_USERNAME>"
+```
+```
 git config --global user.email "<YOUR_EMAIL>"
 ```
 
@@ -55,15 +59,25 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ## Instalando lazygit
 ```
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+```
+```
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+```
+```
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+```
+```
 rm -rf lazygit.tar.gz
 ```
 
 ## Instalando NeoVIM
 ```
 sudo apt update
+```
+```
 sudo apt install python3-pip
+```
+```
 pip install pynvim
 ```
 ```
@@ -75,8 +89,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install --lts
 ```
 ```
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository ppa:neovim-ppa/stable
+```
+```
 sudo apt-get update
+```
+```
 sudo apt-get install neovim
 ```
 ```
@@ -86,11 +104,18 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ## Alterando as configurações do ZSH e outros
 ```
-git clone git@github.com:danyelvarejao/dotfiles.git .dotfiles
+git clone https://github.com/danyelvarejao/dotfiles.git .dotfiles
+```
+```
 rm -rf .zshrc
+```
+```
 mkdir .config
-
+```
+```
 cd ~/.dotfiles
+```
+```
 ./symlinks.sh
 ```
 
