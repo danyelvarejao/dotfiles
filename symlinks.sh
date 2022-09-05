@@ -1,7 +1,14 @@
 #!/bin/bash
 
-ln -sf $PWD/lazygit ~/.config/lazygit
-ln -sf $PWD/nvim ~/.config/nvim
-
+# OH-MY-ZSH
 ln -sf $PWD/zsh/.zshrc ~/.zshrc
 ln -sf $PWD/zsh/.p10k.zsh ~/.p10k.zsh
+
+# Lazygit
+ln -sf $PWD/lazygit ~/.config/lazygit
+
+# NeoVIM
+ln -sf $PWD/nvim ~/.config/nvim
+mkdir -p ~/.local/share/nvim/site/pack
+ln -sf $PWD/nvim/themes ~/.local/share/nvim/site/pack
+

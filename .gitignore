@@ -1,4 +1,14 @@
 lazygit/state.yml
 
+nvim/autoload
 nvim/backups
+nvim/.netrwhist
+nvim/plugged
 nvim/undos
+
+coc/extensions/
+!coc/extensions/package.json
+!coc/extensions/yarn.lock
+
+fonts
+fonts-powerline

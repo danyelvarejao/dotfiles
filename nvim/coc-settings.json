@@ -1,0 +1,5 @@
+{
+  "languageserver": {},
+  "coc.preferences.formatOnSaveFiletypes": ["*"]
+}
+
