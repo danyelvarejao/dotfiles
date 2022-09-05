@@ -7,7 +7,7 @@ wsl --install -d Ubuntu
 
 ## Gerando chave ssh (github)
 ```
-ssh-keygen -t ed25519 -C "danyelvarejao@gmail.com"
+ssh-keygen -t ed25519 -C "<YOUR_EMAIL>"
 ```
 
 ## Adicionando chave ao github
@@ -23,8 +23,8 @@ cat id_ed*.pub
 - Cole a chave no campo Key
 - Clique em Add SSH Key
 ```
-git config --global user.name "danyelvarejao"
-git config --global user.email "danyelvarejao@gmail.com"
+git config --global user.name "<YOUR_USERNAME>"
+git config --global user.email "<YOUR_EMAIL>"
 ```
 
 ## Instalando terminal ZSH
@@ -86,7 +86,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ## Alterando as configurações do ZSH e outros
 ```
-git clone git@github.com:danyelvarejao/wsl.git .dotfiles
+git clone git@github.com:danyelvarejao/dotfiles.git .dotfiles
 rm -rf .zshrc
 mkdir .config
 
