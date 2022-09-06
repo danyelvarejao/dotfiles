@@ -7,7 +7,9 @@ ln -sf $PWD/zsh/.p10k.zsh ~/.p10k.zsh
 # Lazygit
 ln -sf $PWD/lazygit ~/.config
 
-# NeoVIM
+# NeoVIM Configs
 ln -sf $PWD/nvim ~/.config
-ln -sf $PWD/nvim/themes ~/.local/share/nvim/site/pack
 
+# NeoVIM Theme
+mkdir -p ~/.local/share/nvim/site/pack/themes/start
+ln -sf $PWD/nvim/themes/dracula_pro ~/.local/share/nvim/site/pack/themes/start/dracula_pro
