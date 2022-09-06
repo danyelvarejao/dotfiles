@@ -15,3 +15,7 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 
 " Clear current search highlight
 nnoremap <C-l> :nohl<CR>
+
+" Comment using (CTRL + k)
+nnoremap <C-k> :Commentary<CR>
+vnoremap <C-k> :Commentary<CR>
