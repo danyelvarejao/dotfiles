@@ -1,4 +1,4 @@
-" Redo with U instead of Ctrl+R
+" Redo with U instead of (Ctrl + R)
 noremap U <C-R>
 
 " Goto file (CTRL + P) fzf plugin
