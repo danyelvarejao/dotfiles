@@ -9,9 +9,3 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>a :q!<CR>
-
-" Move to next buffer
-noremap <Leader>l :bnext<CR>
-
-" Move to previous buffer
-noremap <Leader>h :bprevious<CR>
