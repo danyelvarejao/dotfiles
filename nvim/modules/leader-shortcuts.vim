@@ -9,7 +9,3 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>a :q!<CR>
 
-" Comment using <leader> + k
-nnoremap <Leader>k :Commentary<CR>
-vnoremap <Leader>k :Commentary<CR>
-
