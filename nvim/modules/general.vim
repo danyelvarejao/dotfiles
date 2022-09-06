@@ -1,6 +1,8 @@
 " Global
 let mapleader = "\<Space>"
 
+let g:loaded_perl_provider = 0
+
 syntax on                   " Enable syntax highlight
 set number                  " Show current line number
 set relativenumber          " Enable relative number
@@ -26,6 +28,7 @@ set showtabline=2           " Always show tabs
 set noshowmode              " We don't need to see things like -- INSERT -- anymore
 set signcolumn=yes          " Always show the sign column (errors, warnings, etc)
 set clipboard=unnamedplus   " Allow to use clipboard from OS
+set mouse=c                 " Disable mouse
 
 au FileType * set fo-=c fo-=r fo-=o    " No comment new line
 

@@ -40,4 +40,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 	" Vim Move
 	Plug 'matze/vim-move'
+
+	" Nerd Tree
+	Plug 'scrooloose/nerdtree'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'ryanoasis/vim-devicons'
 call plug#end()
