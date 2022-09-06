@@ -25,6 +25,7 @@ set background=dark         " Setting dark mode
 set showtabline=2           " Always show tabs
 set noshowmode              " We don't need to see things like -- INSERT -- anymore
 set signcolumn=yes          " Always show the sign column (errors, warnings, etc)
+set clipboard=unnamedplus   " Allow to use clipboard from OS
 highlight clear SignColumn
 
 filetype on          " Detect and set the filetype option and trigger the FileType Event
