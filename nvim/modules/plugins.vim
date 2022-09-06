@@ -18,9 +18,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" Fazer fechamento automático de pares (parênteses, colchetes, aspas, etc)
 	Plug 'jiangmiao/auto-pairs'
 
-	" Dicas de teclas de atalho
-	Plug 'folke/which-key.nvim'
-
 	" === 
 	" Início da instalação do fzf
 	" O fzf serve para fazer buscas no estilo do vscode, com Ctrl + P
@@ -28,9 +25,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/fzf.vim'
 	" Final da instalação do fzf
 	" ===
-
-	" Dicas de teclas de atalho
-	Plug 'folke/which-key.nvim'
 
 	" Suporte para Styled Components
 	Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
