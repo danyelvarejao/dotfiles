@@ -2,6 +2,7 @@
 let mapleader = "\<Space>"
 
 syntax on                   " Enable syntax highlight
+set number                  " Show current line number
 set relativenumber          " Enable relative number
 set tabstop=4               " Show existing tab with 4 spaces width
 set softtabstop=4           " Show existing tab with 4 spaces width
@@ -25,6 +26,9 @@ set showtabline=2           " Always show tabs
 set noshowmode              " We don't need to see things like -- INSERT -- anymore
 set signcolumn=yes          " Always show the sign column (errors, warnings, etc)
 set clipboard=unnamedplus   " Allow to use clipboard from OS
+
+au FileType * set fo-=c fo-=r fo-=o    " No comment new line
+
 highlight clear SignColumn
 
 filetype on          " Detect and set the filetype option and trigger the FileType Event
