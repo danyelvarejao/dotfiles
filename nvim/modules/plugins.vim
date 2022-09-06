@@ -41,4 +41,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" Nerd Tree
 	Plug 'preservim/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
+
+	" Vim Move
+	Plug 'matze/vim-move'
 call plug#end()
