@@ -3,7 +3,6 @@ let mapleader = "\<Space>"
 
 syntax on                   " Enable syntax highlight
 set relativenumber          " Enable relative number
-set nu                      " Enable line numbers
 set tabstop=4               " Show existing tab with 4 spaces width
 set softtabstop=4           " Show existing tab with 4 spaces width
 set shiftwidth=4            " When indenting with '>', use 4 spaces width
