@@ -1,3 +1,6 @@
+" Redo with U instead of Ctrl+R
+noremap U <C-R>
+
 " Move a line of text using ALT+[jk]
 nnoremap <A-j> mz:m+<CR>`z
 nnoremap <A-k> mz:m-2<CR>`z
