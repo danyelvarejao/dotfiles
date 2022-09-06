@@ -12,3 +12,6 @@ nnoremap <C-o> :Buffers<CR>
 
 " Nerd Tree
 nnoremap <C-e> :NERDTreeToggle<CR>
+
+" Clear current search highlight
+nnoremap <C-l> :nohl<CR>
