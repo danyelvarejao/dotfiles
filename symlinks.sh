@@ -12,4 +12,4 @@ ln -sf $PWD/nvim ~/.config
 
 # NeoVIM Theme
 mkdir -p ~/.local/share/nvim/site/pack/themes/start
-ln -sf $PWD/nvim/themes/dracula_pro ~/.local/share/nvim/site/pack/themes/start/dracula_pro
+ln -sf $PWD/nvim/themes/** ~/.local/share/nvim/site/pack/themes/start
