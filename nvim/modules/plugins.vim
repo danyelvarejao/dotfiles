@@ -35,8 +35,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" Suporte para VueJS
 	Plug 'posva/vim-vue'
 
-	" Emmet (HTML)
-	Plug 'mattn/emmet-vim'
+	" Adicionar comentários em várias linguagens
+	Plug 'tpope/vim-commentary'
 
 	" Nerd Tree
 	Plug 'preservim/nerdtree'
