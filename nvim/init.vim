@@ -6,9 +6,9 @@ source $HOME/.config/nvim/modules/theme.vim
 
 " Configs for plugins
 source $HOME/.config/nvim/modules/plugins/airline.vim
-source $HOME/.config/nvim/modules/plugins/coc.vim
 source $HOME/.config/nvim/modules/plugins/fzf.vim
-source $HOME/.config/nvim/modules/plugins/nerd-tree.vim
+source $HOME/.config/nvim/modules/plugins/coc.vim
+source $HOME/.config/nvim/modules/plugins/commentary.vim
 
 " General
 source $HOME/.config/nvim/modules/general.vim

@@ -38,10 +38,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" Adicionar comentários em várias linguagens
 	Plug 'tpope/vim-commentary'
 
-	" Nerd Tree
-	Plug 'preservim/nerdtree'
-	Plug 'ryanoasis/vim-devicons'
-
 	" Vim Move
 	Plug 'matze/vim-move'
 call plug#end()
