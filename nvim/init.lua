@@ -17,6 +17,6 @@ local modules = {
 for _, path in ipairs(modules) do
   local ok, err = pcall(require, path)
   if not ok then
-    error(('Failed to load %s'):format(path))
+    return
   end
 end

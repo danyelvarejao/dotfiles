@@ -25,7 +25,7 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
-  error("Packer is not installed")
+  return
 end
 
 -- Install plugins
@@ -65,6 +65,6 @@ return packer.startup(function(use)
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
-    require('packer').sync()
+    packer.sync()
   end
 end)
