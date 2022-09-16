@@ -1,5 +1,6 @@
 local status_ok, nvim_tree = pcall(require, 'nvim-tree')
 if not status_ok then
+  error(('Failed to load %s'):format('nvim-tree'))
   return
 end
 
