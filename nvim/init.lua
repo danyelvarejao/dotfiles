@@ -1,12 +1,13 @@
 local modules = {
   ---- Core Settings ----------------------------------
-  "core.plugins",           -- Plugins + Packer Config
-  "core.keymaps",           -- Custom Keymaps
-  "core.options",           -- General Options
+  'core.plugins',           -- Plugins + Packer Config
+  'core.keymaps',           -- Custom Keymaps
+  'core.options',           -- General Options
 
   ---- Plugins Settings -------------------------------
-  "configs.theme",          -- Colorscheme
-  "configs.nvim-tree",      -- File Tree
+  'configs.theme',          -- Colorscheme
+  'configs.lualine',        -- Statusline
+  'configs.nvim-tree',      -- File Tree
 }
 
 -- Using pcall we can handle better any loading issues
