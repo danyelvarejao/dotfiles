@@ -31,10 +31,10 @@ map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
 -- Resize current buffer by +/- 2
-map('n', '<C-left>', ':vertical resize +2<CR>')
+map('n', '<C-right>', ':vertical resize +2<CR>')
 map('n', '<C-down>', ':resize +2<CR>')
 map('n', '<C-up>', ':resize -2<CR>')
-map('n', '<C-right>', ':vertical resize -2<CR>')
+map('n', '<C-left>', ':vertical resize -2<CR>')
 
 -- Reload configuration without restart nvim
 map('n', '<leader>r', ':so %<CR>')
