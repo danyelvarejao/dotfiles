@@ -65,7 +65,8 @@ return packer.startup(function(use)
   -- Add you plugins here:
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
-
+  -- Colorscheme
+  use 'marko-cerovac/material.nvim'
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
