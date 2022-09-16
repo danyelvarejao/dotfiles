@@ -7,7 +7,9 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Change leader to a space
+map('', '<Space>', '<Nop>')
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -----------------------------------------------------------
 -- Neovim shortcuts
@@ -29,10 +31,10 @@ map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
 -- Resize current buffer by +/- 2
-map("n", "<C-left>", ":vertical resize +2<CR>", {})
-map("n", "<C-down>", ":resize +2<CR>", {})
-map("n", "<C-up>", ":resize -2<CR>", {})
-map("n", "<C-right>", ":vertical resize -2<CR>", {})
+map('n', '<C-left>', ':vertical resize +2<CR>')
+map('n', '<C-down>', ':resize +2<CR>')
+map('n', '<C-up>', ':resize -2<CR>')
+map('n', '<C-right>', ':vertical resize -2<CR>')
 
 -- Reload configuration without restart nvim
 map('n', '<leader>r', ':so %<CR>')
@@ -45,6 +47,10 @@ map('n', '<leader>q', ':q<CR>')
 
 -- Close all windows and exit with <leader> and Q
 map('n', '<leader>Q', ':qa!<CR>')
+
+-- Don't accidently create macros when trying to quit
+map('n', 'Q', 'q')
+map('n', 'q', '<nop>')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts

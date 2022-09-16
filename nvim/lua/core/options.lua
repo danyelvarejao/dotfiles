@@ -27,12 +27,6 @@ local configs = {
     showmode = false,
     relativenumber = true,
   },
-  
-  ['o'] = {},
-  
-  ['g'] = {
-    mapleader = ' ',
-  }
 }
 
 for config, options in pairs(configs) do
