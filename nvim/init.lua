@@ -9,6 +9,7 @@ local modules = {
   'configs.lualine',        -- Statusline
   'configs.nvim-tree',      -- File Tree
   'configs.bufferline',     -- Bufferline
+  'configs.nvim-colorizer', -- HEX Colors
 }
 
 -- Using pcall we can handle better any loading issues
