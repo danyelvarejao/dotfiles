@@ -80,6 +80,13 @@ return packer.startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
   }
 
+  -- Bufferline
+  use { 
+    'akinsho/bufferline.nvim',
+    tag = "v2.*",
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

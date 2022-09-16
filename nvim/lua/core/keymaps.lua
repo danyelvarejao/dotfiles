@@ -31,10 +31,10 @@ map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
 -- Resize current buffer by +/- 2
-map('n', '<C-right>', ':vertical resize +2<CR>')
+map('n', '<C-left>', ':vertical resize +2<CR>')
 map('n', '<C-down>', ':resize +2<CR>')
 map('n', '<C-up>', ':resize -2<CR>')
-map('n', '<C-left>', ':vertical resize -2<CR>')
+map('n', '<C-right>', ':vertical resize -2<CR>')
 
 -- Reload configuration without restart nvim
 map('n', '<leader>r', ':so %<CR>')
@@ -58,3 +58,11 @@ map('n', 'q', '<nop>')
 
 -- Toggle file tree
 map('n', '<leader>e', ':NvimTreeToggle<CR>')
+
+-- Bufferline
+map('n', '<leader>bf',   ':BufferLinePick <CR>')
+map('n', '<leader>bc',   ':BufferLinePickClose <CR>')
+map('n', '<TAB>',        ':BufferLineCycleNext <CR>')
+map('n', '<S-TAB>',      ':BufferLineCyclePrev <CR>')
+map('n', '<leader>bm.',  ':BufferLineMoveNext <CR>')
+map('n', '<leader>bm,',  ':BufferLineMovePrev <CR>')

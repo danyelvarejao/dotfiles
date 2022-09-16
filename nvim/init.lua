@@ -8,6 +8,7 @@ local modules = {
   'configs.theme',          -- Colorscheme
   'configs.lualine',        -- Statusline
   'configs.nvim-tree',      -- File Tree
+  'configs.bufferline',     -- Bufferline
 }
 
 -- Using pcall we can handle better any loading issues
