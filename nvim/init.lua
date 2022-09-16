@@ -5,7 +5,7 @@ local modules = {
   'core.options',           -- General Options
 
   ---- Plugins Settings -------------------------------
-  'configs.theme',          -- Colorscheme
+  'configs.material',       -- Material Theme
   'configs.lualine',        -- Statusline
   'configs.nvim-tree',      -- File Tree
   'configs.bufferline',     -- Bufferline
