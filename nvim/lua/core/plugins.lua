@@ -31,6 +31,7 @@ for _, plugin in pairs(disabled_built_ins) do
   vim.g["loaded_" .. plugin] = 1
 end
 
+-- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
@@ -77,7 +78,8 @@ return packer.startup(function(use)
   -- File Tree
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    tag = 'nightly'
   }
 
   -- Bufferline
