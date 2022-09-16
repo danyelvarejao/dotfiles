@@ -1,22 +1,22 @@
 local modules = {
   ---- Core Settings ----------------------------------
-  'core.plugins',           -- Plugins + Packer Config
+  'core.plugins',           -- Disable built in plugins
   'core.keymaps',           -- Custom Keymaps
   'core.options',           -- General Options
 
   ---- Plugins Settings -------------------------------
-  'configs.material',       -- Material Theme
-  'configs.lualine',        -- Statusline
-  'configs.nvim-tree',      -- File Tree
-  'configs.bufferline',     -- Bufferline
-  'configs.nvim-colorizer', -- HEX Colors
-  'configs.lazygit',        -- Lazygit
+  'plugins.init',           -- Packer install and plugins initialization
+  'plugins.material',       -- Material Theme
+  'plugins.lualine',        -- Statusline
+  'plugins.nvim-tree',      -- File Tree
+  'plugins.bufferline',     -- Bufferline
+  'plugins.nvim-colorizer', -- HEX Colors
+  'plugins.lazygit',        -- Lazygit
 }
 
--- Using pcall we can handle better any loading issues
-for _, module in ipairs(modules) do
-  local ok, err = pcall(require, module)
+for _, path in ipairs(modules) do
+  local ok, err = pcall(require, path)
   if not ok then
-    error(('Failed to load %s'):format(module))
+    error(('Failed to load %s'):format(path))
   end
 end
