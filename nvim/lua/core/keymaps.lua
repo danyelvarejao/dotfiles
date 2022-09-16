@@ -36,6 +36,10 @@ map('n', '<C-down>',  ':resize +2<CR>')
 map('n', '<C-up>',    ':resize -2<CR>')
 map('n', '<C-right>', ':vertical resize -2<CR>')
 
+-- Better indent
+map('v', '>', '>gv')
+map('v', '<', '<gv')
+
 -- Reload configuration without restart nvim
 map('n', '<leader>r', ':so %<CR>')
 
