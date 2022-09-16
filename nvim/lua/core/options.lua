@@ -1,10 +1,10 @@
 local configs = {
   ['opt'] = {
     number = true,
-    tabstop = 4,
-    softtabstop = 4,
-    shiftwidth = 4,
-    expandtab = 4,
+    tabstop = 2,
+    softtabstop = 2,
+    shiftwidth = 2,
+    expandtab = true,
     wrap = false,
     swapfile = false,
     backup = false,
@@ -25,11 +25,10 @@ local configs = {
     mouse = 'a',
     ruler = true,
     showmode = false,
-  },
-  
-  ['o'] = {
     relativenumber = true,
   },
+  
+  ['o'] = {},
   
   ['g'] = {
     mapleader = ' ',

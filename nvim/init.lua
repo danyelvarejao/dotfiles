@@ -1,14 +1,17 @@
 local modules = {
   ---- Core Settings ----------------------------------
-  "core/options",           -- General Options
-  "core/plugins",           -- Plugins + Packer Config
-  "core/keymaps",           -- Custom Keymaps
+  "core.plugins",           -- Plugins + Packer Config
+  "core.keymaps",           -- Custom Keymaps
+  "core.options",           -- General Options
+
+  ---- Plugins Settings -------------------------------
+  "configs.theme",          -- Colorscheme
 }
 
 -- Using pcall we can handle better any loading issues
 for _, module in ipairs(modules) do
   local ok, err = pcall(require, module)
   if not ok then
-    return
+    error(('Failed to load %s'):format(module))
   end
 end
