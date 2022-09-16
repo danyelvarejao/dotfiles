@@ -151,5 +151,3 @@ npm install -g bash-language-server pyright vscode-langservers-extracted typescr
 ```ssh
 ./uninstall.sh
 ```
-
-test
