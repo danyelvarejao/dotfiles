@@ -66,3 +66,6 @@ map('n', '<TAB>',        ':BufferLineCycleNext <CR>')
 map('n', '<S-TAB>',      ':BufferLineCyclePrev <CR>')
 map('n', '<leader>bm.',  ':BufferLineMoveNext <CR>')
 map('n', '<leader>bm,',  ':BufferLineMovePrev <CR>')
+
+-- Lazygit
+map('n', '<Leader>gg',   ':LazyGit <CR>')

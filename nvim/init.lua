@@ -10,6 +10,7 @@ local modules = {
   'configs.nvim-tree',      -- File Tree
   'configs.bufferline',     -- Bufferline
   'configs.nvim-colorizer', -- HEX Colors
+  'configs.lazygit',        -- Lazygit
 }
 
 -- Using pcall we can handle better any loading issues
