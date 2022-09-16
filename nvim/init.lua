@@ -6,6 +6,7 @@ local modules = {
 
   ---- Plugins Settings -------------------------------
   "configs.theme",          -- Colorscheme
+  "configs.nvim-tree",      -- File Tree
 }
 
 -- Using pcall we can handle better any loading issues

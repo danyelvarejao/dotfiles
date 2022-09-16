@@ -56,3 +56,5 @@ map('n', 'q', '<nop>')
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
 
+-- Toggle file tree
+map('n', '<leader>e', ':NvimTreeToggle<CR>')
