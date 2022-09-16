@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# OH-MY-ZSH
+# Remove OH-MY-ZSH
 rm -rf ~/.zshrc
 rm -rf ~/.p10k.zsh
 
-# Lazygit
+# Remove Lazygit
 rm -rf ~/.config/lazygit
 
-# NeoVIM Configs
+# Remove NeoVIM Configs and Caches
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
+rm -rf $PWD/nvim/plugin
+rm -rf $PWD/nvim/undos
