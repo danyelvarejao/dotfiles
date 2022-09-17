@@ -21,6 +21,9 @@ map('', '<down>',  '<nop>')
 map('', '<left>',  '<nop>')
 map('', '<right>', '<nop>')
 
+-- Remap reundo
+map('n', 'U', '<C-R>')
+
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
 
