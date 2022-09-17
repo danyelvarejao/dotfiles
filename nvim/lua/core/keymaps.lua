@@ -24,6 +24,10 @@ map('', '<right>', '<nop>')
 -- Remap reundo
 map('n', 'U', '<C-R>')
 
+-- Remap { and } to contrary
+map('n', '{', '}')
+map('n', '}', '{')
+
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
 
