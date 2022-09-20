@@ -79,4 +79,4 @@ map('n', '<leader>bm.',   ':BufferLineMoveNext <CR>')
 map('n', '<leader>bm,',   ':BufferLineMovePrev <CR>')
 
 -- Lazygit
-map('n', '<Leader>gg',   ':LazyGit <CR>')
+map('n', '<Leader>lg',   ':LazyGit <CR>')
