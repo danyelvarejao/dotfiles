@@ -69,10 +69,9 @@ map('n', '0', '$')
 -----------------------------------------------------------
 
 -- Toggle file tree
-map('n', '<leader>e', ':NvimTreeToggle<CR>')
+map('n', '<leader>e', ':NvimTreeFocus<CR>')
 
 -- Bufferline
-map('n', '<leader>bd',    ':bd<CR>')
 map('n', '<leader>bf',    ':BufferLinePick <CR>')
 map('n', '<leader>bc',    ':BufferLinePickClose <CR>')
 map('n', '<TAB>',         ':BufferLineCycleNext <CR>')
