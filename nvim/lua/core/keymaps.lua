@@ -47,9 +47,6 @@ map('n', '<C-right>', ':vertical resize -2<CR>')
 map('v', '>', '>gv')
 map('v', '<', '<gv')
 
--- Reload configuration without restart nvim
-map('n', '<leader>r', ':so %<CR>')
-
 -- Fast saving with <leader> and w
 map('n', '<leader>s', ':w<CR>')
 
@@ -71,6 +68,7 @@ map('n', 'q', '<nop>')
 map('n', '<leader>e', ':NvimTreeToggle<CR>')
 
 -- Bufferline
+map('n', '<leader>bd',    ':bd<CR>')
 map('n', '<leader>bf',    ':BufferLinePick <CR>')
 map('n', '<leader>bc',    ':BufferLinePickClose <CR>')
 map('n', '<TAB>',         ':BufferLineCycleNext <CR>')
