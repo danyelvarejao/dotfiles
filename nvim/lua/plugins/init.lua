@@ -65,6 +65,9 @@ return packer.startup(function(use)
   -- Comment lines and selections
   use 'terrortylor/nvim-comment'
 
+  -- Move lines and selections
+  use 'fedepujol/move.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

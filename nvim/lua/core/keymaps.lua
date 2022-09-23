@@ -82,3 +82,14 @@ map('n', '<leader>bm,',   ':BufferLineMovePrev <CR>')
 
 -- Lazygit
 map('n', '<leader>lg',   ':LazyGit <CR>')
+
+-- Move
+map('n', '<A-j>', ':MoveLine(1)<CR>')
+map('n', '<A-k>', ':MoveLine(-1)<CR>')
+map('v', '<A-j>', ':MoveBlock(1)<CR>')
+map('v', '<A-k>', ':MoveBlock(-1)<CR>')
+
+map('n', '<A-h>', ':MoveHChar(-1)<CR>')
+map('n', '<A-l>', ':MoveHChar(1)<CR>')
+map('v', '<A-h>', ':MoveHBlock(-1)<CR>')
+map('v', '<A-l>', ':MoveHBlock(1)<CR>')
