@@ -62,6 +62,9 @@ return packer.startup(function(use)
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
 
+  -- Comment lines and selections
+  use 'terrortylor/nvim-comment'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

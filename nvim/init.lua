@@ -12,6 +12,7 @@ local modules = {
   'plugins.bufferline',     -- Bufferline
   'plugins.nvim-colorizer', -- HEX Colors
   'plugins.lazygit',        -- Lazygit
+  'plugins.nvim-comment',   -- Comment lines and selections
 }
 
 for _, path in ipairs(modules) do
