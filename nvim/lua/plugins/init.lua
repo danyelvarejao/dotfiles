@@ -57,6 +57,9 @@ return packer.startup(function(use)
   -- HEX Colors
   use 'norcalli/nvim-colorizer.lua'
 
+  -- Indentation
+  use 'lukas-reineke/indent-blankline.nvim'
+
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
 
