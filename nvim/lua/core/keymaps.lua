@@ -48,7 +48,7 @@ map('v', '>', '>gv')
 map('v', '<', '<gv')
 
 -- Fast saving with <leader> and w
-map('n', '<leader>s', ':w<CR>')
+map('n', '<leader>w', ':w<CR>')
 
 -- Fast quiting with <leader> and q
 map('n', '<leader>q', ':q<CR>')
