@@ -60,6 +60,10 @@ map('n', '<leader>Q', ':qa!<CR>')
 map('n', 'Q', 'q')
 map('n', 'q', '<nop>')
 
+-- Remap $ and 0 for ortholinear keyboard
+map('n', '!', '0')
+map('n', '0', '$')
+
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
@@ -77,4 +81,4 @@ map('n', '<leader>bm.',   ':BufferLineMoveNext <CR>')
 map('n', '<leader>bm,',   ':BufferLineMovePrev <CR>')
 
 -- Lazygit
-map('n', '<Leader>lg',   ':LazyGit <CR>')
+map('n', '<leader>lg',   ':LazyGit <CR>')
