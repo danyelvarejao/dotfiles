@@ -33,19 +33,18 @@ return packer.startup(function(use)
   -- Add you plugins here:
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
+  -- Nvim web devicons
+  use 'kyazdani42/nvim-web-devicons'
+
   -- Colorscheme
   use 'marko-cerovac/material.nvim'
 
   -- Statusline
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'nvim-lualine/lualine.nvim'
   
   -- File Tree
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = { 'kyazdani42/nvim-web-devicons' },
     tag = 'nightly'
   }
 
@@ -53,7 +52,6 @@ return packer.startup(function(use)
   use { 
     'akinsho/bufferline.nvim',
     tag = "v2.*",
-    requires = 'kyazdani42/nvim-web-devicons'
   }
 
   -- HEX Colors

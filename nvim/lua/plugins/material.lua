@@ -23,6 +23,7 @@ material.setup({
     borders = false,
     eob_lines = false 
   }
+          bg = "#SOME_COLOR", -- background color
 })
 vim.cmd 'colorscheme material'
 
