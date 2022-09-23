@@ -3,6 +3,7 @@ local modules = {
   'core.plugins',           -- Disable built in plugins
   'core.keymaps',           -- Custom Keymaps
   'core.options',           -- General Options
+  'core.autocmds',          -- Auto commands
 
   ---- Plugins Settings -------------------------------
   'plugins.init',           -- Packer install and plugins initialization
