@@ -13,6 +13,7 @@ local modules = {
   'plugins.nvim-colorizer', -- HEX Colors
   'plugins.lazygit',        -- Lazygit
   'plugins.nvim-comment',   -- Comment lines and selections
+  'plugins.nvim-treesitter' -- Syntax highlighting
 }
 
 for _, path in ipairs(modules) do

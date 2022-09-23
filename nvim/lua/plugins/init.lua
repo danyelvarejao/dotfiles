@@ -68,6 +68,9 @@ return packer.startup(function(use)
   -- Move lines and selections
   use 'fedepujol/move.nvim'
 
+  -- Syntax highlighting
+  use 'nvim-treesitter/nvim-treesitter'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
