@@ -130,5 +130,5 @@ export VISUAL='vim'
 export EDITOR=$VISUAL
 
 function ms() {
-    date +%s
+  date +%s
 }
