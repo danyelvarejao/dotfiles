@@ -15,11 +15,11 @@ vim.g.maplocalleader = ' '
 -- Neovim shortcuts
 -----------------------------------------------------------
 
--- Disable arrow keys
-map('', '<up>',    '<nop>')
-map('', '<down>',  '<nop>')
-map('', '<left>',  '<nop>')
-map('', '<right>', '<nop>')
+-- Remap arrow keys to goto end/start line and file
+map('n', '<up>',    'gg')
+map('n', '<down>',  'G')
+map('n', '<left>',  '0')
+map('n', '<right>', '$')
 
 -- Remap reundo
 map('n', 'U', '<C-R>')
@@ -59,10 +59,6 @@ map('n', '<leader>Q', ':qa!<CR>')
 -- Don't accidently create macros when trying to quit
 map('n', 'Q', 'q')
 map('n', 'q', '<nop>')
-
--- Remap $ and 0 for ortholinear keyboard
-map('n', '!', '0')
-map('n', '0', '$')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
