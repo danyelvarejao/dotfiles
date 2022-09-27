@@ -71,7 +71,7 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>')
 map('n', '<leader>bf',    ':BufferLinePick <CR>')
 map('n', '<leader>bc',    ':BufferLinePickClose <CR>')
 map('n', '<TAB>',         ':BufferLineCycleNext <CR>')
-map('n', '<leader><TAB>', ':BufferLineCyclePrev <CR>')
+map('n', '<S-TAB>',       ':BufferLineCyclePrev <CR>')
 map('n', '<leader>bm.',   ':BufferLineMoveNext <CR>')
 map('n', '<leader>bm,',   ':BufferLineMovePrev <CR>')
 
