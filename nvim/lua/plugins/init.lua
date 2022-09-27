@@ -33,7 +33,7 @@ return packer.startup(function(use)
   -- Add you plugins here:
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
-  -- Nvim web devicons
+  -- Nvim web devicons (required of some plugins)
   use 'kyazdani42/nvim-web-devicons'
 
   -- Colorscheme
