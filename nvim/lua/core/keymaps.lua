@@ -47,19 +47,6 @@ map('n', '<C-right>', ':vertical resize -2<CR>')
 map('v', '>', '>gv')
 map('v', '<', '<gv')
 
--- Fast saving with <leader> and w
-map('n', '<leader>w', ':w<CR>')
-
--- Fast quiting with <leader> and q
-map('n', '<leader>q', ':q<CR>')
-
--- Close all windows and exit with <leader> and Q
-map('n', '<leader>Q', ':qa!<CR>')
-
--- Don't accidently create macros when trying to quit
-map('n', 'Q', 'q')
-map('n', 'q', '<nop>')
-
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
