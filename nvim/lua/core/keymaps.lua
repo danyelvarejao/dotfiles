@@ -16,17 +16,17 @@ vim.g.maplocalleader = ' '
 -----------------------------------------------------------
 
 -- Remap arrow keys to goto end/start line and file
-map('n', '<up>',    'gg')
-map('n', '<down>',  'G')
-map('n', '<left>',  '0')
-map('n', '<right>', '$')
+map('', '<up>',    'gg')
+map('', '<down>',  'G')
+map('', '<left>',  '0')
+map('', '<right>', '$')
 
 -- Remap reundo
 map('n', 'U', '<C-R>')
 
 -- Remap { and } to contrary
-map('n', '{', '}')
-map('n', '}', '{')
+map('', '{', '}')
+map('', '}', '{')
 
 -- Clear search highlighting with <esc>
 map('n', '<esc>', ':nohl<CR>')
