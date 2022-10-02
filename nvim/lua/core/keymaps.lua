@@ -28,8 +28,8 @@ map('n', 'U', '<C-R>')
 map('n', '{', '}')
 map('n', '}', '{')
 
--- Clear search highlighting with <leader> and c
-map('n', '<leader>c', ':nohl<CR>')
+-- Clear search highlighting with <esc>
+map('n', '<esc>', ':nohl<CR>')
 
 -- Move around splits using Ctrl + {h,j,k,l}
 map('n', '<C-h>', '<C-w>h')
