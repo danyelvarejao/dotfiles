@@ -10,7 +10,6 @@ local configs = {
     backup = false,
     undodir = vim.fn.stdpath('config') .. '/undos',
     undofile = true,
-    hlsearch = false,
     incsearch = true,
     termguicolors = true,
     scrolloff = 8,
@@ -30,7 +29,7 @@ local configs = {
 }
 
 for config, options in pairs(configs) do
-  for name, value in pairs(options) do 
+  for name, value in pairs(options) do
     vim[config][name] = value
   end
 end
