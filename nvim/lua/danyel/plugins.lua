@@ -1,3 +1,9 @@
+-- Disable built-in plugins
+local disabled_built_ins = {"2html_plugin", "getscript", "getscriptPlugin", "gzip", "logipat", "netrw", "netrwPlugin", "netrwSettings", "netrwFileHandlers", "matchit", "tar", "tarPlugin", "rrhelper", "spellfile_plugin", "vimball", "vimballPlugin", "zip", "zipPlugin", "tutor", "rplugin", "synmenu", "optwin", "compiler", "bugreport", "ftplugin"}
+for _, plugin in pairs(disabled_built_ins) do
+  vim.g["loaded_" .. plugin] = 1
+end
+
 -- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -14,11 +20,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.o.runtimepath = vim.fn.stdpath('data') .. '/site/pack/*/start/*,' .. vim.o.runtimepath
 end
 
--- Autocommand that reloads neovim whenever you save the init.lua file
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost init.lua source <afile> | PackerSync
+  autocmd!
+  autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
 
@@ -30,50 +36,36 @@ end
 
 -- Install plugins
 return packer.startup(function(use)
-  -- Add you plugins here:
-  use 'wbthomason/packer.nvim' -- packer can manage itself
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
 
-  -- Nvim web devicons (required of some plugins)
+  -- Required of some plugins
   use 'kyazdani42/nvim-web-devicons'
 
-  -- Colorscheme
-  use 'marko-cerovac/material.nvim'
+  -- Syntax Highlighting
+  use 'nvim-treesitter/nvim-treesitter'
+
+  -- Color scheme
+  use 'navarasu/onedark.nvim'
 
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
-  
+
   -- File Tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    tag = 'nightly'
-  }
+  use 'kyazdani42/nvim-tree.lua'
 
   -- Bufferline
-  use { 
-    'akinsho/bufferline.nvim',
-    tag = "v2.*",
-  }
+  use 'akinsho/bufferline.nvim'
 
   -- HEX Colors
   use 'norcalli/nvim-colorizer.lua'
 
-  -- Indentation
+  -- Indent Customization
   use 'lukas-reineke/indent-blankline.nvim'
 
-  -- Lazygit
-  use 'kdheepak/lazygit.nvim'
-
-  -- Comment lines and selections
-  use 'terrortylor/nvim-comment'
-
-  -- Move lines and selections
+  -- Fast move lines and selections
   use 'fedepujol/move.nvim'
 
-  -- Syntax highlighting
-  use 'nvim-treesitter/nvim-treesitter'
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if packer_bootstrap then
     packer.sync()
   end

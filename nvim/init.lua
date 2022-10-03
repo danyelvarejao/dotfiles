@@ -1,26 +1,13 @@
-local modules = {
-  ---- Core Settings ----------------------------------
-  'core.plugins',             -- Disable built in plugins
-  'core.keymaps',             -- Custom Keymaps
-  'core.options',             -- General Options
-  'core.autocmds',            -- Auto commands
+require('danyel.options')
+require('danyel.autocmds')
+require('danyel.keymaps')
+require('danyel.plugins')
 
-  ---- Plugins Settings -------------------------------
-  'plugins.init',             -- Packer install and plugins initialization
-  'plugins.material',         -- Material Theme
-  'plugins.lualine',          -- Statusline
-  'plugins.nvim-tree',        -- File Tree
-  'plugins.bufferline',       -- Bufferline
-  'plugins.nvim-colorizer',   -- HEX Colors
-  'plugins.lazygit',          -- Lazygit
-  'plugins.nvim-comment',     -- Comment lines and selections
-  'plugins.nvim-treesitter',  -- Syntax highlighting
-  'plugins.indent-blankline', -- Indent Blankline
-}
-
-for _, path in ipairs(modules) do
-  local ok, err = pcall(require, path)
-  if not ok then
-    return
-  end
+local has = vim.fn.has
+if has("macunix") then
+  require('danyel.os.mac')
+elseif has("win32") then
+  require('danyel.os.windows')
+else
+  require('danyel.os.linux')
 end

@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
+
 nvim_tree.setup {
   auto_reload_on_write = true,
   create_in_closed_folder = false,
@@ -14,7 +16,7 @@ nvim_tree.setup {
   open_on_setup = false,
   open_on_setup_file = false,
   open_on_tab = false,
-  -- focus_empty_on_setup = false,
+  focus_empty_on_setup = false,
   ignore_buf_on_tab_change = {},
   sort_by = "name",
   root_dirs = {},
@@ -24,9 +26,9 @@ nvim_tree.setup {
   respect_buf_cwd = false,
   on_attach = "disable",
   remove_keymaps = false,
-  -- select_prompts = false,
+  select_prompts = false,
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     centralize_selection = false,
     width = 30,
     hide_root_folder = false,
@@ -126,8 +128,8 @@ nvim_tree.setup {
     args = {},
   },
   diagnostics = {
-    enable = true,
-    show_on_dirs = true,
+    enable = false,
+    show_on_dirs = false,
     debounce_delay = 50,
     icons = {
       hint = "",
@@ -172,7 +174,7 @@ nvim_tree.setup {
       },
     },
     open_file = {
-      quit_on_open = true,
+      quit_on_open = false,
       resize_window = true,
       window_picker = {
         enable = true,
