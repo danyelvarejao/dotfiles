@@ -113,10 +113,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # My Custom Configs
-alias freela="cd ~/freelancers"
-alias dev="cd ~/development"
-alias prod="cd ~/production"
-alias projects="cd ~/projects"
+alias freela="cd ~/Freelancers"
+alias dev="cd ~/Development"
+alias prod="cd ~/Production"
+alias projects="cd ~/Projects"
 
 alias lg="lazygit"
 alias vim="nvim"
