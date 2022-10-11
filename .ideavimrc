@@ -1,0 +1,56 @@
+" Load vim configs
+source ~/.vimrc
+
+" Plugins
+set NERDTree
+set commentary
+set surround
+set ideajoin
+set multiple-cursors
+set highlightedyank
+
+" Enable native idea paste action for put operations
+set clipboard+=ideaput
+
+" Disable bells
+set visualbell
+set noerrorbells
+
+" Fast reload .ideavimrc
+map <leader>si   :source ~/.ideavimrc<CR>
+
+" Keymaps
+nmap <C-o>          <Action>(Forward)
+nmap <C-i>          <Action>(Back)
+nmap <C-d>          <Plug>NextWholeOccurrence
+xmap <C-d>          <Plug>NextWholeOccurrence
+nmap <C-x>          <Plug>SkipOccurrence
+xmap <C-x>          <Plug>SkipOccurrence
+nmap <C-p>          <Plug>RemoveOccurrence
+xmap <C-p>          <Plug>RemoveOccurrence
+
+nmap <Leader><TAB>  <Action>(PreviousTab)
+nmap <TAB>          <Action>(NextTab)
+
+nmap <A-j>          <Action>(MoveStatementDown)
+nmap <A-k>          <Action>(MoveStatementUp)
+vmap <A-j>          <Action>(MoveStatementDown)
+vmap <A-k>          <Action>(MoveStatementUp)
+
+nmap <C-A-j>        <Action>(EditorCloneCaretBelow)
+nmap <C-A-k>        <Action>(EditorCloneCaretAbove)
+
+nmap <Leader>f      <Action>(SearchEverywhere)
+nmap <Leader>R      <Action>(ReplaceInPath)
+nmap <Leader>r      <Action>(RenameElement)
+nmap <Leader>p      <Action>(GotoFile)
+nmap <Leader>a      <Action>(ShowIntentionActions)
+nmap <Leader>d      <Action>(QuickJavaDoc)
+
+nmap gd             <Action>(GotoDeclarationOnly)
+nmap gi             <Action>(GotoImplementation)
+nmap gcc            <Action>(CommentByLineComment)
+vmap gcc            <Action>(CommentByLineComment)
+
+" Plugins Keymaps
+nmap <Leader>e      :NERDTreeFocus<CR>

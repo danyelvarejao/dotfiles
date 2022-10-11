@@ -13,3 +13,7 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 rm -rf $PWD/nvim/plugin
 rm -rf $PWD/nvim/undos
+
+# Remove IdeaVIM Configs
+rm -rf ~/.ideavimrc
+rm -rf ~/.vimrc
