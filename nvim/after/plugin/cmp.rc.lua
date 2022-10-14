@@ -3,6 +3,11 @@ if not cmp_status_ok then
   return
 end
 
+local luasnip_status_ok, luasnip = pcall(require, 'luasnip')
+if not luasnip_status_ok then
+  return
+end
+
 local lsp_kind_status_ok, lspkind = pcall(require, 'lspkind')
 if not lsp_kind_status_ok then
   return
@@ -10,12 +15,8 @@ end
 
 cmp.setup({
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-      -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-      -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      luasnip.lsp_expand(args.body)
     end,
   },
   window = {
@@ -30,10 +31,8 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
-    -- { name = 'luasnip' }, -- For luasnip users.
-    -- { name = 'ultisnips' }, -- For ultisnips users.
-    -- { name = 'snippy' }, -- For snippy users.
+    { name = 'luasnip' },
+    { name = 'path' },
   }, {
     { name = 'buffer' },
   }),
