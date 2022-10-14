@@ -63,6 +63,18 @@ return packer.startup(function(use)
   -- Indent Customization
   use 'lukas-reineke/indent-blankline.nvim'
 
+  -- Best navigation on start / end (%)
+  use 'andymass/vim-matchup'
+
+  -- Auto Tag
+  use 'windwp/nvim-ts-autotag'
+
+  -- Auto Pairs
+  use 'windwp/nvim-autopairs'
+
+  -- Neovim comment
+  use 'numToStr/Comment.nvim'
+
   -- Fast move lines and selections
   use 'fedepujol/move.nvim'
 

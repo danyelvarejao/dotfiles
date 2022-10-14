@@ -52,4 +52,14 @@ nvim_treesitter.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+
+  -- Auto Tag
+  autotag = {
+    enable = true,
+  },
+
+  -- Vim Matchup
+  matchup = {
+    enable = true,
+  },
 }
