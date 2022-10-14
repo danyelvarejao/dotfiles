@@ -3,8 +3,8 @@ if not cmp_status_ok then
   return
 end
 
-local lsp_status_ok, lspkind = pcall(require, 'lspkind')
-if not lsp_status_ok then
+local lsp_kind_status_ok, lspkind = pcall(require, 'lspkind')
+if not lsp_kind_status_ok then
   return
 end
 
