@@ -24,6 +24,7 @@ nmap <C-i>          <Action>(Back)
 nmap <C-o>          <Action>(Forward)
 
 nmap <Leader>p      <Action>(SearchEverywhere)
+nmap <Leader>f      <Action>(FindInPath)
 nmap <Leader>r      <Action>(RenameElement)
 nmap <Leader>R      <Action>(RenameInPath)
 nmap <Leader>a      <Action>(ShowIntentionActions)
@@ -39,8 +40,8 @@ xmap <C-p>          <Plug>RemoveOccurrence
 nmap <S-C-n>        <Plug>AllWholeOccurrences
 xmap <S-C-n>        <Plug>AllWholeOccurrences
 
-map <C-h>           <Action>(PreviousTab)
-map <C-l>           <Action>(NextTab)
+map <Leader><Tab>   <Action>(PreviousTab)
+map <Tab>           <Action>(NextTab)
 
 nmap <A-j>          <Action>(MoveStatementDown)
 nmap <A-k>          <Action>(MoveStatementUp)
