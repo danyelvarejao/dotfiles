@@ -30,6 +30,3 @@ vim.keymap.set('n', '<C-right>', ':vertical resize -2<CR>')
 vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', '<', '<gv')
 
--- Increment/decrement
-vim.keymap.set('n', '+', '<C-a>')
-vim.keymap.set('n', '-', '<C-x>')
