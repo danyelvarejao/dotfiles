@@ -29,6 +29,3 @@ vim.keymap.set('n', '<C-right>', ':vertical resize -2<CR>')
 -- Better indent
 vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', '<', '<gv')
-
--- Emmet (Temporary)
-vim.keymap.set('i', '<tab>', '<plug>(emmet-expand-abbr)')
