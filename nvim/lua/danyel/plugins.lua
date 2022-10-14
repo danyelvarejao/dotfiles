@@ -66,6 +66,18 @@ return packer.startup(function(use)
   -- Fast move lines and selections
   use 'fedepujol/move.nvim'
 
+  -- LSP (Language Servers Protocol)
+  use 'neovim/nvim-lspconfig'
+
+  -- CMP (Autocomplete)
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+
   if packer_bootstrap then
     packer.sync()
   end
