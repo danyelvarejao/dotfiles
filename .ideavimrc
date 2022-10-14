@@ -20,17 +20,27 @@ set noerrorbells
 map <leader>si   :source ~/.ideavimrc<CR>
 
 " Keymaps
-nmap <C-o>          <Action>(Forward)
 nmap <C-i>          <Action>(Back)
-nmap <C-d>          <Plug>NextWholeOccurrence
-xmap <C-d>          <Plug>NextWholeOccurrence
+nmap <C-o>          <Action>(Forward)
+
+nmap <Leader>p      <Action>(SearchEverywhere)
+nmap <Leader>r      <Action>(RenameElement)
+nmap <Leader>R      <Action>(RenameInPath)
+nmap <Leader>a      <Action>(ShowIntentionActions)
+nmap <Leader>d      <Action>(QuickJavaDoc)
+nmap <Leader>v      <Action>(ShowErrorDescription)
+
+nmap <C-n>          <Plug>NextWholeOccurrence
+xmap <C-n>          <Plug>NextWholeOccurrence
 nmap <C-x>          <Plug>SkipOccurrence
 xmap <C-x>          <Plug>SkipOccurrence
 nmap <C-p>          <Plug>RemoveOccurrence
 xmap <C-p>          <Plug>RemoveOccurrence
+nmap <S-C-n>        <Plug>AllWholeOccurrences
+xmap <S-C-n>        <Plug>AllWholeOccurrences
 
-nmap <Leader><TAB>  <Action>(PreviousTab)
-nmap <TAB>          <Action>(NextTab)
+map <C-h>           <Action>(PreviousTab)
+map <C-l>           <Action>(NextTab)
 
 nmap <A-j>          <Action>(MoveStatementDown)
 nmap <A-k>          <Action>(MoveStatementUp)
@@ -40,17 +50,12 @@ vmap <A-k>          <Action>(MoveStatementUp)
 nmap <C-A-j>        <Action>(EditorCloneCaretBelow)
 nmap <C-A-k>        <Action>(EditorCloneCaretAbove)
 
-nmap <Leader>f      <Action>(SearchEverywhere)
-nmap <Leader>R      <Action>(ReplaceInPath)
-nmap <Leader>r      <Action>(RenameElement)
-nmap <Leader>p      <Action>(GotoFile)
-nmap <Leader>a      <Action>(ShowIntentionActions)
-nmap <Leader>d      <Action>(QuickJavaDoc)
-
 nmap gd             <Action>(GotoDeclarationOnly)
 nmap gi             <Action>(GotoImplementation)
+
 nmap gcc            <Action>(CommentByLineComment)
-vmap gcc            <Action>(CommentByLineComment)
+vmap gcc            <Action>(CommentByLineComment)<Esc>
+vmap gbc            <Action>(CommentByBlockComment)<Esc>
 
 " Plugins Keymaps
 nmap <Leader>e      :NERDTreeFocus<CR>
