@@ -3,6 +3,11 @@ if not cmp_status_ok then
   return
 end
 
+local lsp_status_ok, lspkind = pcall(require, 'lspkind')
+if not lsp_status_ok then
+  return
+end
+
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
@@ -31,7 +36,12 @@ cmp.setup({
     -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = 'buffer' },
-  })
+  }),
+
+  -- LSPKind to icons in autocomplete
+  formatting = {
+    format = lspkind.cmp_format({ with_text = true })
+  },
 })
 
 -- Set configuration for specific filetype.
