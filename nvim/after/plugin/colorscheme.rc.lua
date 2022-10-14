@@ -1,9 +1,9 @@
-local status_ok, onedark = pcall(require, 'onedark')
+local status_ok, colorscheme = pcall(require, 'onedark')
 if not status_ok then
   return
 end
 
-onedark.setup  {
+colorscheme.setup  {
   style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
   transparent = true,  -- Show/hide background
   term_colors = true, -- Change terminal color as per the selected theme style
@@ -31,8 +31,21 @@ onedark.setup  {
   },
   
   -- Custom Highlights --
-  colors = {}, -- Override default colors
-  highlights = {}, -- Override highlight groups
+  colors = {
+
+  }, -- Override default colors
+  highlights = {
+    DiagnosticError = { fg = 'red' },
+    DiagnosticHint = { fg = 'purple' },
+    DiagnosticInfo = { fg = 'cyan' },
+    DiagnosticWarn = { fg = 'yellow' },
+    
+    DiagnosticVirtualTextError = { bg = 'transparent', fg = 'red' },
+    DiagnosticVirtualTextWarn = { bg = 'transparent', fg = 'orange' },
+    DiagnosticVirtualTextInfo = { bg = 'transparent', fg = 'cyan' },
+    DiagnosticVirtualTextHint = { bg = 'transparent', fg = 'purple' },
+
+  }, -- Override highlight groups
   
   -- Plugins Config --
   diagnostics = {
@@ -42,4 +55,4 @@ onedark.setup  {
   },
 }
 
-onedark.load()
+colorscheme.load()
