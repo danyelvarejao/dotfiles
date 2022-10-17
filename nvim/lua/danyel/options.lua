@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 vim.opt.title = true
 
+vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.relativenumber = true
 
