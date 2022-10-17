@@ -1,10 +1,15 @@
+local status_ok, telescope = pcall(require, 'telescope')
+if not status_ok then
+  return
+end
+
 local telescope_builtin_status_ok, telescope_buitin = pcall(require, 'telescope.builtin')
 if not telescope_builtin_status_ok then
   return
 end
 
-local status_ok, telescope = pcall(require, 'telescope')
-if not status_ok then
+local telescope_actions_status_ok, telescope_actions = pcall(require, 'telescope.actions')
+if not telescope_actions_status_ok then
   return
 end
 
@@ -21,6 +26,9 @@ telescope.setup{
       -- map actions.which_key to <C-h> (default: <C-/>)
       -- actions.which_key shows the mappings for your picker,
       -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+      n = {
+        ["q"] = telescope_actions.close
+      },
     }
   },
   pickers = {
