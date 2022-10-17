@@ -1,11 +1,11 @@
-local status_ok, saga = pcall(require, 'lspsaga')
+local status_ok, lspsaga = pcall(require, 'lspsaga')
 if not status_ok then
   return
 end
 
 local keymap = vim.keymap.set
 
-saga.init_lsp_saga()
+lspsaga.init_lsp_saga()
 
 -- Lsp finder find the symbol definition implement reference
 -- if there is no implement it will hide
