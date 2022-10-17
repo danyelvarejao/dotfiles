@@ -45,6 +45,23 @@ return packer.startup(function(use)
   -- Syntax Highlighting
   use 'nvim-treesitter/nvim-treesitter'
 
+  -- LSP (Language Servers Protocol)
+  use 'neovim/nvim-lspconfig'
+  use 'onsails/lspkind.nvim'
+
+  -- CMP (Autocomplete)
+  use 'hrsh7th/cmp-cmdline'
+  use 'L3MON4D3/LuaSnip'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'hrsh7th/nvim-cmp'
+
+  -- Telescope
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+
   -- Color scheme
   use 'navarasu/onedark.nvim'
 
@@ -74,23 +91,6 @@ return packer.startup(function(use)
 
   -- Fast move lines and selections
   use 'fedepujol/move.nvim'
-
-  -- LSP (Language Servers Protocol)
-  use 'neovim/nvim-lspconfig'
-  use 'onsails/lspkind.nvim'
-
-  -- CMP (Autocomplete)
-  use 'hrsh7th/cmp-cmdline'
-  use 'L3MON4D3/LuaSnip'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'hrsh7th/nvim-cmp'
-
-  -- Telescope
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
 
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
