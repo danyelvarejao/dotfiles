@@ -32,3 +32,6 @@ vim.keymap.set('v', '<', '<gv')
 
 -- Select all
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
+
+-- Remove letter without yank
+vim.keymap.set('n', 'x', '"_x')
