@@ -29,3 +29,6 @@ vim.keymap.set('n', '<C-M-right>', ':vertical resize -2<CR>')
 -- Better indent
 vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', '<', '<gv')
+
+-- Select all
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
