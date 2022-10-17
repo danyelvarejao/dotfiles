@@ -130,6 +130,12 @@ npm i -g vscode-langservers-extracted
 npm install -g typescript typescript-language-server
 ```
 
+- Instalando Plugins Dependencies
+```
+sudo apt install fd-find
+sudo apt-get install ripgrep
+```
+
 ## Alterando as configurações do ZSH e outros
 
 ```ssh

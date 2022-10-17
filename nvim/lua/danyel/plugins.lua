@@ -91,6 +91,9 @@ return packer.startup(function(use)
       'saadparwaiz1/cmp_luasnip',
     },
   }
+  -- Telescope
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
 
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
