@@ -57,9 +57,4 @@ nvim_treesitter.setup {
   autotag = {
     enable = true,
   },
-
-  -- Vim Matchup
-  matchup = {
-    enable = true,
-  },
 }
