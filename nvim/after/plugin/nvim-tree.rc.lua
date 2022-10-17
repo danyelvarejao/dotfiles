@@ -100,7 +100,7 @@ nvim_tree.setup {
           symlink_open = "",
         },
         git = {
-          unstaged = "✗",
+          unstaged = "",
           staged = "✓",
           unmerged = "",
           renamed = "➜",
@@ -128,14 +128,14 @@ nvim_tree.setup {
     args = {},
   },
   diagnostics = {
-    enable = false,
-    show_on_dirs = false,
+    enable = true,
+    show_on_dirs = true,
     debounce_delay = 50,
     icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
+      error = " ",
+      warning = " ",
+      hint = " ",
+      info = " "
     },
   },
   filters = {
