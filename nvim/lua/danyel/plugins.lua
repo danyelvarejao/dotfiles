@@ -92,6 +92,9 @@ return packer.startup(function(use)
     },
   }
 
+  -- Lazygit
+  use 'kdheepak/lazygit.nvim'
+
   if packer_bootstrap then
     packer.sync()
   end
