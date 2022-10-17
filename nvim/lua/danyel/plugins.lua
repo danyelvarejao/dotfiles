@@ -95,6 +95,9 @@ return packer.startup(function(use)
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
 
+  -- GitSigns
+  use 'lewis6991/gitsigns.nvim'
+
   if packer_bootstrap then
     packer.sync()
   end
