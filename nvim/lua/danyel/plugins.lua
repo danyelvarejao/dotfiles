@@ -63,9 +63,6 @@ return packer.startup(function(use)
   -- Indent Customization
   use 'lukas-reineke/indent-blankline.nvim'
 
-  -- Auto Tag
-  use 'windwp/nvim-ts-autotag'
-
   -- Auto Pairs
   use 'windwp/nvim-autopairs'
 
