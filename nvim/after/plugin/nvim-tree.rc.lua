@@ -8,7 +8,7 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 nvim_tree.setup {
   auto_reload_on_write = true,
   create_in_closed_folder = false,
-  disable_netrw = false,
+  disable_netrw = true,
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
@@ -28,7 +28,7 @@ nvim_tree.setup {
   remove_keymaps = false,
   select_prompts = false,
   view = {
-    adaptive_size = false,
+    adaptive_size = true,
     centralize_selection = false,
     width = 30,
     hide_root_folder = false,
