@@ -80,17 +80,14 @@ return packer.startup(function(use)
   use 'onsails/lspkind.nvim'
 
   -- CMP (Autocomplete)
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-      'hrsh7th/cmp-cmdline',
-      'L3MON4D3/LuaSnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
-      'saadparwaiz1/cmp_luasnip',
-    },
-  }
+  use 'hrsh7th/cmp-cmdline'
+  use 'L3MON4D3/LuaSnip'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'hrsh7th/nvim-cmp'
+
   -- Telescope
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
