@@ -139,7 +139,6 @@ sudo apt-get install ripgrep
 ## Instalando Tmux
 ```
 sudo apt install tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ## Alterando as configurações do ZSH e outros

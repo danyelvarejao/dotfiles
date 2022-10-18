@@ -15,4 +15,5 @@ ln -sf $PWD/.ideavimrc ~/.ideavimrc
 ln -sf $PWD/.vimrc ~/.vimrc
 
 # Tmux
-ln -s -f $PWD/.tmux.conf ~/.tmux.conf
+ln -s -f $PWD/tmux/.tmux.conf ~/.tmux.conf
+cp $PWD/tmux/.tmux.conf.local ~/.tmux.conf.local

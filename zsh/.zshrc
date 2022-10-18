@@ -126,7 +126,7 @@ alias dotfiles="cd ~/.dotfiles"
 
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
-export VISUAL='vim'
+export VISUAL='nvim'
 export EDITOR=$VISUAL
 
 function ms() {
