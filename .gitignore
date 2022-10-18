@@ -4,3 +4,5 @@ lazygit/state.yml
 
 nvim/undos
 nvim/plugin
+
+tmux/plugins

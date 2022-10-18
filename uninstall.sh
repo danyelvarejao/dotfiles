@@ -17,3 +17,6 @@ rm -rf $PWD/nvim/undos
 # Remove IdeaVIM Configs
 rm -rf ~/.ideavimrc
 rm -rf ~/.vimrc
+
+# Remove Tmux
+rm -rf ~/.tmux.conf
