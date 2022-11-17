@@ -16,7 +16,7 @@ vim.keymap.set('n', '<TAB>',         ':BufferLineCycleNext <CR>', {})
 vim.keymap.set('n', '<leader><TAB>', ':BufferLineCyclePrev <CR>', {})
 vim.keymap.set('n', '<leader>bm.',   ':BufferLineMoveNext <CR>', {})
 vim.keymap.set('n', '<leader>bm,',   ':BufferLineMovePrev <CR>', {})
-vim.keymap.set('n', '<leader>bd',    '<Cmd>lua close_current_buffer()<CR>', {})
+vim.keymap.set('n', '<leader>q',     '<Cmd>lua close_current_buffer()<CR>', {})
 
 bufferline.setup {
   options = {
