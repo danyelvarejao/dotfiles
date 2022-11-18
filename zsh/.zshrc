@@ -11,13 +11,8 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export LOCAL="$HOME/.local/bin"
-export FLUTTER="$HOME/Library/flutter/bin"
-export PUB_CACHE="$HOME/.pub-cache/bin"
-export CMD_LINE_TOOLS="$HOME/Library/android/cmdline-tools/8.0/bin"
-export EMULATOR="$HOME/Library/android/emulator"
-export PLATFORM_TOOLS="$HOME/Library/android/platform-tools"
 
-export PATH="$PATH:$LOCAL:$FLUTTER:$PUB_CACHE:$CMD_LINE_TOOLS:$EMULATOR:$PLATFORM_TOOLS"
+export PATH="$PATH:$LOCAL"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
