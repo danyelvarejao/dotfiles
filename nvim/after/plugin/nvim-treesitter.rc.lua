@@ -11,9 +11,8 @@ nvim_treesitter.setup {
     'graphql', 'hjson', 'html', 'http', 'java',
     'javascript', 'jsdoc', 'json', 'json5', 'lua',
     'make', 'markdown', 'markdown_inline', 'php',
-    'prisma', 'python', 'regex', 'rust',
-    'scss', 'sql', 'tsx', 'typescript', 'vim', 'vue',
-    'yaml'
+    'prisma', 'python', 'regex', 'scss', 'sql',
+    'tsx', 'typescript', 'vim', 'vue', 'yaml'
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
