@@ -13,10 +13,10 @@ if not telescope_actions_status_ok then
   return
 end
 
-vim.keymap.set('n', '<leader>ff', telescope_buitin.find_files, {})
-vim.keymap.set('n', '<leader>fg', telescope_buitin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', telescope_buitin.buffers, {})
---vim.keymap.set('n', 'fh', telescope_buitin.help_tags, {})
+vim.keymap.set('n', '<leader>p', telescope_buitin.find_files, {})
+vim.keymap.set('n', '<leader>f', telescope_buitin.live_grep, {})
+-- vim.keymap.set('n', '<leader>fb', telescope_buitin.buffers, {})
+-- vim.keymap.set('n', 'fh', telescope_buitin.help_tags, {})
 
 telescope.setup{
   defaults = {
