@@ -21,3 +21,6 @@ rm -rf ~/.vimrc
 # Remove Tmux
 rm -rf ~/.tmux.conf
 rm -rf ~/.tmux.conf.local
+
+# Remove Alacritty
+rm -rf ~/.alacritty.yml
