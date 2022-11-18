@@ -136,6 +136,14 @@ sudo apt install fd-find
 sudo apt-get install ripgrep
 ```
 
+- Fix clipboard (copy/paste) using win32yank.exe
+```
+curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
+unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+chmod +x /tmp/win32yank.exe
+sudo mv /tmp/win32yank.exe /usr/local/bin/
+```
+
 ## Instalando Tmux
 ```
 sudo apt install tmux
