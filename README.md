@@ -123,11 +123,12 @@ sudo apt-get install neovim
 - Instalando LSP Servers
 
 ```
+npm i -g tree-sitter-cli
 npm i -g bash-language-server
-pip install pyright
-sudo apt-get install clangd-12
 npm i -g vscode-langservers-extracted
-npm install -g typescript typescript-language-server
+npm i -g typescript typescript-language-server
+sudo apt install clangd
+pip install pyright
 ```
 
 - Instalando Plugins Dependencies
