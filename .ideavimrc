@@ -19,25 +19,17 @@ set visualbell
 map <leader>si   :source ~/.ideavimrc<CR>
 
 " Keymaps
-nmap <C-i>          <Action>(Back)
-nmap <C-o>          <Action>(Forward)
+map <C-i>           <Action>(Back)
+map <C-o>           <Action>(Forward)
 
-nmap <Leader>p      <Action>(SearchEverywhere)
-nmap <Leader>f      <Action>(FindInPath)
-nmap <Leader>r      <Action>(RenameElement)
-nmap <Leader>R      <Action>(RenameInPath)
-nmap <Leader>a      <Action>(ShowIntentionActions)
-nmap <Leader>d      <Action>(QuickJavaDoc)
-nmap <Leader>v      <Action>(ShowErrorDescription)
-
-nmap <C-n>          <Plug>NextWholeOccurrence
-xmap <C-n>          <Plug>NextWholeOccurrence
-nmap <C-x>          <Plug>SkipOccurrence
-xmap <C-x>          <Plug>SkipOccurrence
-nmap <C-p>          <Plug>RemoveOccurrence
-xmap <C-p>          <Plug>RemoveOccurrence
-nmap <S-C-n>        <Plug>AllWholeOccurrences
-xmap <S-C-n>        <Plug>AllWholeOccurrences
+map <Leader>p       <Action>(GotoFile)
+map <Leader>o       <Action>(SearchEverywhere)
+map <Leader>f       <Action>(FindInPath)
+map <Leader>r       <Action>(RenameElement)
+map <Leader>R       <Action>(RenameInPath)
+map <Leader>a       <Action>(ShowIntentionActions)
+map <Leader>d       <Action>(QuickJavaDoc)
+map <Leader>v       <Action>(ShowErrorDescription)
 
 map <Leader><Tab>   <Action>(PreviousTab)
 map <Tab>           <Action>(NextTab)
@@ -61,3 +53,13 @@ nmap <Leader>ww     <Action>(HideAllWindows)
 
 " Plugins Keymaps
 nmap <Leader>e      :NERDTreeFocus<CR>
+
+nmap <C-n>          <Plug>NextWholeOccurrence
+xmap <C-n>          <Plug>NextWholeOccurrence
+nmap <C-x>          <Plug>SkipOccurrence
+xmap <C-x>          <Plug>SkipOccurrence
+nmap <C-p>          <Plug>RemoveOccurrence
+xmap <C-p>          <Plug>RemoveOccurrence
+nmap <S-C-n>        <Plug>AllWholeOccurrences
+xmap <S-C-n>        <Plug>AllWholeOccurrences
+
