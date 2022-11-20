@@ -33,3 +33,7 @@ nnoremap - <C-x>
 
 " Clear search highlight
 nnoremap <esc> :noh<return><esc>
+
+" Fast save and quiting
+nnoremap <Leader>q    :q<CR>
+nnoremap <Leader>w    :w<CR>
