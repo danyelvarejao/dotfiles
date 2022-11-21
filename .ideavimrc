@@ -42,7 +42,7 @@ vmap <A-k>          <Action>(MoveStatementUp)
 nmap <C-A-j>        <Action>(EditorCloneCaretBelow)
 nmap <C-A-k>        <Action>(EditorCloneCaretAbove)
 
-nmap gd             <Action>(GotoDeclarationOnly)
+nmap gd             <Action>(GotoDeclaration)
 nmap gi             <Action>(GotoImplementation)
 
 nmap gcc            <Action>(CommentByLineComment)
