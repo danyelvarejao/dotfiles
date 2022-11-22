@@ -74,9 +74,6 @@ return packer.startup(function(use)
   -- Bufferline
   use 'akinsho/bufferline.nvim'
 
-  -- HEX Colors
-  use 'norcalli/nvim-colorizer.lua'
-
   -- Indent Customization
   use 'lukas-reineke/indent-blankline.nvim'
 
