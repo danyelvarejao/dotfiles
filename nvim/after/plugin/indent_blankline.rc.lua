@@ -4,7 +4,5 @@ if not status_ok then
 end
 
 indent_blankline.setup {
-  space_char_blankline = " ",
-  show_current_context = true,
   show_first_indent_level = false,
 }
