@@ -6,11 +6,6 @@ autocmd('TextYankPost', {
   group = 'HighlightYank',
   pattern = '*',
   callback = function()
-    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '200' })
+    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '100' })
   end
-})
-
-autocmd('BufWritePre', {
-  pattern = '',
-  command = ":%s/\\s\\+$//e"
 })
