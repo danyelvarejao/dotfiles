@@ -1,3 +1,8 @@
+local status_ok, colorscheme = pcall(require, 'tokyodark')
+if not status_ok then
+  return
+end
+
 vim.g.tokyodark_transparent_background = false
 vim.g.tokyodark_enable_italic_comment = true
 vim.g.tokyodark_enable_italic = true
