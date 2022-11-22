@@ -21,7 +21,7 @@ vim.keymap.set('n', '<leader>w',     ':w<CR>', {})
 
 bufferline.setup {
   options = {
-    always_show_bufferline = false,
+    always_show_bufferline = true,
     offsets = {
       {
         filetype = 'NvimTree',
