@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
 
   -- Color scheme
-  use 'navarasu/onedark.nvim'
+  use 'tiagovla/tokyodark.nvim'
 
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
