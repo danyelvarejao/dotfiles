@@ -118,15 +118,13 @@ export NVM_DIR="$HOME/.nvm"
 alias freela="cd ~/Freelancers"
 alias dev="cd ~/Development"
 alias prod="cd ~/Production"
-alias projects="cd ~/Projects"
+alias proj="cd ~/Projects"
 
 alias lg="lazygit"
 alias vim="nvim"
 alias v="nvim"
 alias vimconfig="cd ~/.config/nvim"
 alias dotfiles="cd ~/.dotfiles"
-
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 export VISUAL='nvim'
 export EDITOR=$VISUAL
