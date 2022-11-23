@@ -67,6 +67,16 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.sumneko_lua.setup({
+  settings = {
+    Lua = {
+      diagnostics = {
+        enable = false,
+      },
+    },
+  },
+})
+
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
