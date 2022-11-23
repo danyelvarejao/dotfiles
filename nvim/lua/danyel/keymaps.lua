@@ -23,8 +23,8 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 -- Resize current buffer by +/- 2
 vim.keymap.set('n', '<C-M-l>',  ':vertical resize +2<CR>')
 vim.keymap.set('n', '<C-M-j>',  ':resize +2<CR>')
-vim.keymap.set('n', '<C-M-k>',    ':resize -2<CR>')
-vim.keymap.set('n', '<C-M-l>', ':vertical resize -2<CR>')
+vim.keymap.set('n', '<C-M-k>',  ':resize -2<CR>')
+vim.keymap.set('n', '<C-M-l>',  ':vertical resize -2<CR>')
 
 -- Better indent
 vim.keymap.set('v', '>', '>gv')
