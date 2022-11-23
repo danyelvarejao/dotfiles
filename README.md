@@ -9,16 +9,8 @@ wsl --install -d Ubuntu
 ## Gerando chave ssh (github)
 
 ```ssh
-ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-
-```zsh
-ssh-add ~/.ssh/id_ed25519
-```
-
-## Adicionando chave ao github
-```ssh
-cat ~/.ssh/id_ed25519.pub
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+more ~/.ssh/id_rsa.pub
 ```
 
 - Copie a chave que aparecer no seu terminal
