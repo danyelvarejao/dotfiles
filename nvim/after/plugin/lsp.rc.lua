@@ -46,7 +46,16 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-local servers = { 'bashls', 'pyright', 'clangd', 'html', 'cssls', 'tsserver' }
+local servers = {
+  'bashls',
+  'pyright',
+  'clangd',
+  'html',
+  'cssls',
+  'tsserver',
+  'sumneko_lua'
+}
+
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,

@@ -11,8 +11,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export LOCAL="$HOME/.local/bin"
+export LUA="$HOME/Others/lua-language-server/bin"
 
-export PATH="$PATH:$LOCAL"
+export PATH="$PATH:$LOCAL:$LUA"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

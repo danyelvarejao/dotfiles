@@ -121,6 +121,14 @@ npm i -g vscode-langservers-extracted
 npm i -g typescript typescript-language-server
 sudo apt install clangd
 pip install pyright
+sudo apt install gcc g++ clang ninja-build
+git clone --depth=1 https://hub.fastgit.xyz/sumneko/lua-language-server ~/Others/lua-language-server
+cd Others/lua-language-server
+git submodule update --init --recursive
+cd 3rd/luamake
+compile/install.sh
+cd ../..
+./3rd/luamake/luamake rebuild
 ```
 
 - Instalando Plugins Dependencies
