@@ -119,6 +119,7 @@ npm i -g tree-sitter-cli
 npm i -g bash-language-server
 npm i -g vscode-langservers-extracted
 npm i -g typescript typescript-language-server
+npm i -g @tailwindcss/language-server
 sudo apt install clangd
 pip install pyright
 sudo apt install gcc g++ clang ninja-build
