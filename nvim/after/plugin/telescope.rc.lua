@@ -22,6 +22,7 @@ telescope.setup{
   defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,
+    file_ignore_patterns = {".git/", ".cache", "%.o", "%.a", "%.out", "%.class", "%.pdf", "%.mkv", "%.mp4", "%.zip"},
     mappings = {
       -- map actions.which_key to <C-h> (default: <C-/>)
       -- actions.which_key shows the mappings for your picker,
