@@ -80,9 +80,6 @@ return packer.startup(function(use)
   -- Bufferline
   use 'akinsho/bufferline.nvim'
 
-  -- Indent Customization
-  use 'lukas-reineke/indent-blankline.nvim'
-
   -- Auto Pairs
   use 'windwp/nvim-autopairs'
 
