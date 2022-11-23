@@ -121,7 +121,6 @@ alias prod="cd ~/Production"
 alias proj="cd ~/Projects"
 
 alias lg="lazygit"
-alias vim="nvim"
 alias v="nvim"
 alias vimconfig="cd ~/.config/nvim"
 alias dotfiles="cd ~/.dotfiles"
