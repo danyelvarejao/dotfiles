@@ -83,9 +83,6 @@ return packer.startup(function(use)
   -- Neovim comment
   use 'numToStr/Comment.nvim'
 
-  -- Multiple Cursor
-  use 'mg979/vim-visual-multi'
-
   -- Fast move lines and selections
   use 'fedepujol/move.nvim'
 
