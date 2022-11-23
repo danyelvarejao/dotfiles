@@ -51,9 +51,6 @@ return packer.startup(function(use)
     end,
   }
 
-  -- Auto close tags
-  use 'windwp/nvim-ts-autotag'
-
   -- LSP (Language Servers Protocol)
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind.nvim'
