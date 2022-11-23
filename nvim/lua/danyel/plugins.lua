@@ -80,9 +80,6 @@ return packer.startup(function(use)
   -- Bufferline
   use 'akinsho/bufferline.nvim'
 
-  -- Auto Pairs
-  use 'windwp/nvim-autopairs'
-
   -- Neovim comment
   use 'numToStr/Comment.nvim'
 
