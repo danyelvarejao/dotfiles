@@ -37,6 +37,14 @@ nnoremap <esc> :noh<return><esc>
 " Fast save and quiting
 nnoremap <Leader>q    :q<CR>
 nnoremap <Leader>w    :w<CR>
+
+" Fix * (Keep the cursor position, don't move to next match)
+nmap * *N
+
+" Fix n and N. Keeping cursor in center
+nmap n nzz
+nmap N Nzz
+
 " Delete letter in normal mode without yank
 nnoremap x "_x
 nnoremap X "_X
