@@ -35,3 +35,13 @@ vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Remove letter without yank
 vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', 'X', '"_X')
+
+-- Delete a backward word in normal mode without yank
+vim.keymap.set('n', 'dw', 'vb"_d')
+
+-- Clear without yank
+vim.keymap.set('n', 'c', '"_c')
+vim.keymap.set('v', 'c', '"_c')
+vim.keymap.set('n', 'C', '"_C')
+vim.keymap.set('v', 'C', '"_C')
