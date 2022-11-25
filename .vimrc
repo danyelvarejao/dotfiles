@@ -41,3 +41,8 @@ nnoremap <Leader>w    :w<CR>
 nnoremap x "_x
 nnoremap X "_X
 
+" Clear without yank
+nnoremap c "_c
+vnoremap c "_c
+nnoremap C "_C
+vnoremap C "_C
