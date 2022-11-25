@@ -11,7 +11,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export LOCAL="$HOME/.local/bin"
-export LUA="$HOME/Tools/lua-language-server/bin"
+export LUA="$HOME/Others/lua-language-server/bin"
 
 export PATH="$PATH:$LOCAL:$LUA"
 
