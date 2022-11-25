@@ -37,3 +37,7 @@ nnoremap <esc> :noh<return><esc>
 " Fast save and quiting
 nnoremap <Leader>q    :q<CR>
 nnoremap <Leader>w    :w<CR>
+" Delete letter in normal mode without yank
+nnoremap x "_x
+nnoremap X "_X
+
