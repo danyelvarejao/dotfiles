@@ -41,6 +41,9 @@ nnoremap <Leader>w    :w<CR>
 nnoremap x "_x
 nnoremap X "_X
 
+" Delete a backward word in normal mode without yank
+nnoremap dw vb"_d
+
 " Clear without yank
 nnoremap c "_c
 vnoremap c "_c
