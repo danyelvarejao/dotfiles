@@ -154,7 +154,7 @@ sudo apt install tmux
 ## Alterando as configurações do ZSH e outros
 
 ```ssh
-git clone https://github.com/danyelvarejao/dotfiles.git .dotfiles
+git clone git@github.com:danyelvarejao/dotfiles.git .dotfiles
 ```
 
 ```ssh
