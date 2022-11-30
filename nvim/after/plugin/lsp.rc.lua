@@ -8,21 +8,9 @@ if not cmp_nvim_lsp_status_ok then
   return
 end
 
--- Update capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
-
--- Mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
-local opts = { noremap=true, silent=true }
-vim.keymap.set('n', '<leader>v', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, opts)
--- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local on_attach = function(client, bufnr, format)
   -- Highlighting references.
   -- See: https://sbulav.github.io/til/til-neovim-highlight-references/
   -- for the highlight trigger time see: `vim.opt.updatetime`
@@ -43,62 +31,103 @@ local on_attach = function(client, bufnr)
     })
   end
 
-  -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  if format then
+    vim.api.nvim_create_augroup("lsp_format_document", { clear = true })
+    vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup_format,
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.formatting_sync()
+      end,
+    })
+  end
 
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+  -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-  -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-  -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-  -- vim.keymap.set('n', '<space>wl', function()
-  --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  -- end, bufopts)
-  -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  -- vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+  -- vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
+  -- vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', '<leader>v', vim.diagnostic.open_float, opts)
+  -- vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, opts)
+  -- vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, opts)
 end
 
--- Define `root_dir` when needed
--- See: https://github.com/neovim/nvim-lspconfig/issues/320
--- This is a workaround, maybe not work with some servers.
-local root_dir = function()
-  return vim.fn.getcwd()
-end
+-- Update capabilities
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-local servers = {
-  'bashls',
-  'pyright',
-  'clangd',
-  'html',
-  'cssls',
-  'tsserver',
-  'sumneko_lua'
-}
-
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    root_dir = root_dir,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    }
+lspconfig.clangd.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
   }
-end
+})
+
+lspconfig.html.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr, true)
+  end,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  }
+})
+
+lspconfig.cssls.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr, true)
+  end,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  }
+})
+
+lspconfig.tsserver.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr, true)
+  end,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  cmd = { "typescript-language-server", "--stdio" },
+})
+
+lspconfig.tailwindcss.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr, true)
+  end,
+  capabilities = capabilities
+})
 
 lspconfig.sumneko_lua.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+
   settings = {
     Lua = {
       diagnostics = {
-        enable = false,
+        enable = false
+      },
+
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false
       },
     },
   },
