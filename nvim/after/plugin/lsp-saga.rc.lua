@@ -3,11 +3,7 @@ if not status_ok then
   return
 end
 
-saga.init_lsp_saga({
-  code_action_lightbulb = {
-    enable = false,
-  },
-})
+saga.init_lsp_saga()
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "gd", "<cmd>Lspsaga lsp_finder<CR>", opts)

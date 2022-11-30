@@ -54,7 +54,12 @@ return packer.startup(function(use)
   -- LSP (Language Servers Protocol)
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind.nvim'
+
+  -- Better LSP actions
   use 'glepnir/lspsaga.nvim'
+
+  -- Formatting
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- CMP (Autocomplete)
   use 'hrsh7th/cmp-cmdline'
