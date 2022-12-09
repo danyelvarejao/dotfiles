@@ -120,6 +120,8 @@ npm i -g bash-language-server
 npm i -g vscode-langservers-extracted
 npm i -g typescript typescript-language-server
 npm i -g @tailwindcss/language-server
+npm i -g @prisma/language-server
+npm i -g graphql-language-service-cli
 sudo apt install clangd
 pip install pyright
 sudo apt install gcc g++ clang ninja-build

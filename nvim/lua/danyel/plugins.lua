@@ -95,6 +95,9 @@ return packer.startup(function(use)
 
   -- GitSigns
   use 'lewis6991/gitsigns.nvim'
+  
+  -- Prisma
+  use 'pantharshit00/vim-prisma'
 
   if packer_bootstrap then
     packer.sync()

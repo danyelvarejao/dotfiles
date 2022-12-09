@@ -109,6 +109,20 @@ lspconfig.tailwindcss.setup({
   capabilities = capabilities
 })
 
+lspconfig.prismals.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr, true)
+  end,
+  capabilities = capabilities
+})
+
+lspconfig.graphql.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr, true)
+  end,
+  capabilities = capabilities
+})
+
 lspconfig.sumneko_lua.setup({
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
