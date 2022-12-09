@@ -1,8 +1,8 @@
--- Remap arrow keys to goto end/start line and file
-vim.keymap.set('', '<up>',    'gg')
-vim.keymap.set('', '<down>',  'G')
-vim.keymap.set('', '<left>',  '0')
-vim.keymap.set('', '<right>', '$')
+-- Goto end/start line
+vim.keymap.set('n', 'H',  '^')
+vim.keymap.set('n', 'L',  '$')
+vim.keymap.set('v', 'H',  '^')
+vim.keymap.set('v', 'L',  '$')
 
 -- Remap reundo
 vim.keymap.set('n', 'U', '<C-R>')
