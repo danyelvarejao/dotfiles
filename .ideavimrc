@@ -60,6 +60,7 @@ vmap gcc            <Action>(CommentByLineComment)<Esc>
 vmap gbc            <Action>(CommentByBlockComment)<Esc>
 
 " Plugins Keymaps
+nmap <Leader>e      :NERDTreeFocus<CR>
 nmap <C-e>          :NERDTreeFocus<CR>
 
 nmap <C-n>          <Plug>NextWholeOccurrence
