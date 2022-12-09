@@ -1,6 +1,9 @@
 " Load vim configs
 source ~/.vimrc
 
+" Fast reload .ideavimrc
+map <leader>si   :source ~/.ideavimrc<CR>
+
 " Plugins
 set NERDTree
 set commentary
@@ -8,6 +11,7 @@ set surround
 set ideajoin
 set multiple-cursors
 set highlightedyank
+let g:highlightedyank_highlight_duration = "40"
 
 " Enable native idea paste action for put operations
 set clipboard+=ideaput
@@ -15,13 +19,7 @@ set clipboard+=ideaput
 " Disable bells
 set visualbell
 
-" Fast reload .ideavimrc
-map <leader>si   :source ~/.ideavimrc<CR>
-
 " Keymaps
-map <C-i>           <Action>(Back)
-map <C-o>           <Action>(Forward)
-
 map <Leader>p       <Action>(GotoFile)
 map <Leader>o       <Action>(SearchEverywhere)
 map <Leader>f       <Action>(FindInPath)
@@ -30,7 +28,16 @@ map <Leader>R       <Action>(RenameInPath)
 map <Leader>a       <Action>(ShowIntentionActions)
 map <Leader>d       <Action>(QuickJavaDoc)
 map <Leader>v       <Action>(ShowErrorDescription)
+map <Leader>ww      <Action>(HideAllWindows)
 
+nmap gn             <Action>(GotoNextError)
+nmap gp             <Action>(GotoPreviousError)
+nmap gd             <Action>(GotoDeclaration)
+nmap gi             <Action>(GotoImplementation)
+nmap gu             <Action>(ShowUsages)
+
+map <C-i>           <Action>(Back)
+map <C-o>           <Action>(Forward)
 map <Leader><Tab>   <Action>(PreviousTab)
 map <Tab>           <Action>(NextTab)
 
@@ -38,18 +45,12 @@ nmap <A-j>          <Action>(MoveStatementDown)
 nmap <A-k>          <Action>(MoveStatementUp)
 vmap <A-j>          <Action>(MoveStatementDown)
 vmap <A-k>          <Action>(MoveStatementUp)
-
 nmap <C-A-j>        <Action>(EditorCloneCaretBelow)
 nmap <C-A-k>        <Action>(EditorCloneCaretAbove)
-
-nmap gd             <Action>(GotoDeclaration)
-nmap gi             <Action>(GotoImplementation)
 
 nmap gcc            <Action>(CommentByLineComment)
 vmap gcc            <Action>(CommentByLineComment)<Esc>
 vmap gbc            <Action>(CommentByBlockComment)<Esc>
-
-nmap <Leader>ww     <Action>(HideAllWindows)
 
 " Plugins Keymaps
 nmap <Leader>e      :NERDTreeFocus<CR>
@@ -62,4 +63,3 @@ nmap <C-p>          <Plug>RemoveOccurrence
 xmap <C-p>          <Plug>RemoveOccurrence
 nmap <S-C-n>        <Plug>AllWholeOccurrences
 xmap <S-C-n>        <Plug>AllWholeOccurrences
-

@@ -7,7 +7,7 @@ set incsearch " Incremental search
 set smartcase " When searching try to be smart about cases
 set number " Enable line numbers
 set relativenumber " Use relative line numbers
-set scrolloff=8
+set scrolloff=12
 
 " Remap keys for ortholinear keyboard
 noremap 0 $
@@ -49,11 +49,14 @@ nmap N Nzz
 nnoremap x "_x
 nnoremap X "_X
 
-" Delete a backward word in normal mode without yank
-nnoremap dw vb"_d
-
 " Clear without yank
 nnoremap c "_c
 vnoremap c "_c
 nnoremap C "_C
 vnoremap C "_C
+
+" Faster movement to end and beginning of the line
+nnoremap L $
+nnoremap H ^
+vnoremap L $
+vnoremap H ^
