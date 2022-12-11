@@ -31,10 +31,11 @@ map <Leader>v       <Action>(ShowErrorDescription)
 map <Leader>h       <Action>(Replace)
 map <Leader>H       <Action>(ReplaceInPath)
 
-map <C-t>           <Action>(ActivateTerminalToolWindow)
-map <C-w>           <Action>(HideAllWindows)
-map <C-A-z>         <Action>(ToggleZenMode)
-map <C-A-o>         <Action>($ShowTranslationDialogAction)
+" map <C-t>           <Action>(ActivateTerminalToolWindow)
+" map <C-w>           <Action>(HideAllWindows)
+" map <C-A-z>         <Action>(ToggleZenMode)
+" map <C-A-o>         <Action>($ShowTranslationDialogAction)
+" map <Leader>e      :NERDTreeFocus<CR>
 
 nmap gn             <Action>(GotoNextError)
 nmap gp             <Action>(GotoPreviousError)
@@ -61,7 +62,6 @@ vmap gbc            <Action>(CommentByBlockComment)<Esc>
 
 " Plugins Keymaps
 nmap <Leader>e      :NERDTreeFocus<CR>
-nmap <C-e>          :NERDTreeFocus<CR>
 
 nmap <C-n>          <Plug>NextWholeOccurrence
 xmap <C-n>          <Plug>NextWholeOccurrence
