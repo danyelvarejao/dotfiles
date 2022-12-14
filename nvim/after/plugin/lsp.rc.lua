@@ -10,39 +10,7 @@ end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr, format)
-  -- Highlighting references.
-  -- See: https://sbulav.github.io/til/til-neovim-highlight-references/
-  -- for the highlight trigger time see: `vim.opt.updatetime`
-  if client.server_capabilities.documentHighlightProvider then
-    vim.api.nvim_create_augroup("lsp_document_highlight", { clear = true })
-    vim.api.nvim_clear_autocmds { buffer = bufnr, group = "lsp_document_highlight" }
-    vim.api.nvim_create_autocmd("CursorHold", {
-      callback = vim.lsp.buf.document_highlight,
-      buffer = bufnr,
-      group = "lsp_document_highlight",
-      desc = "Document Highlight",
-    })
-    vim.api.nvim_create_autocmd("CursorMoved", {
-      callback = vim.lsp.buf.clear_references,
-      buffer = bufnr,
-      group = "lsp_document_highlight",
-      desc = "Clear All the References",
-    })
-  end
-
-  if format then
-    vim.api.nvim_create_augroup("lsp_format_document", { clear = true })
-    vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = augroup_format,
-      buffer = bufnr,
-      callback = function()
-        vim.lsp.buf.formatting_sync()
-      end,
-    })
-  end
-
+local on_attach = function(client, bufnr)
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
@@ -60,7 +28,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-lspconfig.clangd.setup({
+lspconfig.html.setup({
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
   end,
@@ -70,19 +38,9 @@ lspconfig.clangd.setup({
   }
 })
 
-lspconfig.html.setup({
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr, true)
-  end,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  }
-})
-
 lspconfig.cssls.setup({
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr, true)
+    on_attach(client, bufnr)
   end,
   capabilities = capabilities,
   flags = {
@@ -92,7 +50,7 @@ lspconfig.cssls.setup({
 
 lspconfig.tsserver.setup({
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr, true)
+    on_attach(client, bufnr)
   end,
   capabilities = capabilities,
   flags = {
@@ -104,21 +62,21 @@ lspconfig.tsserver.setup({
 
 lspconfig.tailwindcss.setup({
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr, true)
+    on_attach(client, bufnr)
   end,
   capabilities = capabilities
 })
 
 lspconfig.prismals.setup({
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr, true)
+    on_attach(client, bufnr)
   end,
   capabilities = capabilities
 })
 
 lspconfig.graphql.setup({
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr, true)
+    on_attach(client, bufnr)
   end,
   capabilities = capabilities
 })
