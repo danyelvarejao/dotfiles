@@ -33,6 +33,9 @@ vim.keymap.set('v', '<', '<gv')
 -- Select all
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
+-- Fix * (Keep the cursor position, don't move to next match)
+vim.keymap.set('n', '*', '*N')
+
 -- Remove letter without yank
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'X', '"_X')
