@@ -36,6 +36,14 @@ vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Fix * (Keep the cursor position, don't move to next match)
 vim.keymap.set('n', '*', '*N')
 
+-- Fix n and N. Keeping cursor in center
+vim.keymap.set('n', 'n', 'nzz')
+vim.keymap.set('n', 'N', 'Nzz')
+
+-- Fix (CTRL + d) and (CTRL + u). Keeping cursor in center
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
 -- Remove letter without yank
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'X', '"_X')
