@@ -45,6 +45,10 @@ nmap * *N
 nmap n nzz
 nmap N Nzz
 
+" Fix (CTRL + d) and (CTRL + u). Keeping cursor in center
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
 " Delete letter in normal mode without yank
 nnoremap x "_x
 nnoremap X "_X
