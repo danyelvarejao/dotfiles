@@ -81,29 +81,29 @@ lspconfig.graphql.setup({
   capabilities = capabilities
 })
 
-lspconfig.sumneko_lua.setup({
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-
-  settings = {
-    Lua = {
-      diagnostics = {
-        enable = false
-      },
-
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false
-      },
-    },
-  },
-})
+-- lspconfig.sumneko_lua.setup({
+--   on_attach = function(client, bufnr)
+--     on_attach(client, bufnr)
+--   end,
+--   capabilities = capabilities,
+--   flags = {
+--     debounce_text_changes = 150,
+--   },
+--
+--   settings = {
+--     Lua = {
+--       diagnostics = {
+--         enable = false
+--       },
+--
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--         checkThirdParty = false
+--       },
+--     },
+--   },
+-- })
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
