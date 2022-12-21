@@ -125,6 +125,7 @@ alias lg="lazygit"
 alias v="nvim"
 alias vimconfig="cd ~/.config/nvim"
 alias dotfiles="cd ~/.dotfiles"
+alias ocaml="rlwrap ocaml"
 
 export VISUAL='nvim'
 export EDITOR=$VISUAL
@@ -132,3 +133,7 @@ export EDITOR=$VISUAL
 function ms() {
   date +%s
 }
+
+# opam configuration
+[[ ! -r /home/danyel/.opam/opam-init/init.zsh ]] || source /home/danyel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
