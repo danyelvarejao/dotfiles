@@ -32,7 +32,7 @@ map <Leader>h       <Action>(Replace)
 map <Leader>H       <Action>(ReplaceInPath)
 
 " map <C-t>           <Action>(ActivateTerminalToolWindow)
-" map <C-w>           <Action>(HideAllWindows)
+map <C-w>           <Action>(HideAllWindows)
 " map <C-A-z>         <Action>(ToggleZenMode)
 " map <C-A-o>         <Action>($ShowTranslationDialogAction)
 " map <Leader>e      :NERDTreeFocus<CR>

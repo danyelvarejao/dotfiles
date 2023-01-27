@@ -30,6 +30,8 @@ vnoremap < <gv
 " Increment/Decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
+xnoremap + <C-a>
+xnoremap - <C-x>
 
 " Clear search highlight
 nnoremap <esc> :noh<return><esc>
@@ -49,6 +51,9 @@ nmap N Nzz
 nmap <C-d> <C-d>zz
 nmap <C-u> <C-u>zz
 
+" Paste without yank
+vnoremap p "0p
+
 " Delete letter in normal mode without yank
 nnoremap x "_x
 nnoremap X "_X
@@ -64,3 +69,9 @@ nnoremap L $
 nnoremap H ^
 vnoremap L $
 vnoremap H ^
+
+" Window navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
