@@ -12,8 +12,9 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 export LOCAL="$HOME/.local/bin"
 export LUA="$HOME/Others/lua-language-server/bin"
+export RUST="$HOME/.cargo/env"
 
-export PATH="$PATH:$LOCAL:$LUA"
+export PATH="$PATH:$LOCAL:$LUA:$RUST"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -133,7 +134,3 @@ export EDITOR=$VISUAL
 function ms() {
   date +%s
 }
-
-# opam configuration
-[[ ! -r /home/danyel/.opam/opam-init/init.zsh ]] || source /home/danyel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
