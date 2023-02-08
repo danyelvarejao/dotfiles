@@ -81,6 +81,13 @@ lspconfig.graphql.setup({
   capabilities = capabilities
 })
 
+lspconfig.rust_analyzer.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities
+})
+
 -- lspconfig.sumneko_lua.setup({
 --   on_attach = function(client, bufnr)
 --     on_attach(client, bufnr)
