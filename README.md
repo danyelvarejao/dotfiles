@@ -101,7 +101,7 @@ nvm install --lts
 ```
 
 ```ssh
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/unstable
 ```
 
 ```ssh
