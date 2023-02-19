@@ -127,6 +127,7 @@ alias v="nvim"
 alias vimconfig="cd ~/.config/nvim"
 alias dotfiles="cd ~/.dotfiles"
 alias ocaml="rlwrap ocaml"
+alias lc='colorls -lA --sd'
 
 export VISUAL='nvim'
 export EDITOR=$VISUAL
