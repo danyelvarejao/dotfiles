@@ -157,6 +157,12 @@ sudo mv /tmp/win32yank.exe /usr/local/bin/
 sudo apt install tmux
 ```
 
+## Instalando Colorls
+```
+sudo apt install ruby ruby-dev
+sudo gem install colorls
+```
+
 ## Alterando as configurações do ZSH e outros
 
 ```ssh
