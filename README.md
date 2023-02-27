@@ -115,6 +115,9 @@ sudo apt-get install neovim
 - Instalando LSP Servers
 
 ```
+git clone https://github.com/LuaLS/lua-language-server
+cd lua-language-server
+./make.sh
 npm i -g tree-sitter-cli
 npm i -g bash-language-server
 npm i -g vscode-langservers-extracted
@@ -125,13 +128,6 @@ npm i -g graphql-language-service-cli
 sudo apt install clangd
 pip install pyright
 sudo apt install gcc g++ clang ninja-build
-git clone --depth=1 https://hub.fastgit.xyz/sumneko/lua-language-server ~/Others/lua-language-server
-cd Others/lua-language-server
-git submodule update --init --recursive
-cd 3rd/luamake
-compile/install.sh
-cd ../..
-./3rd/luamake/luamake rebuild
 cd ~/.local/bin
 curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
 chmod +x ~/.local/bin/rust-analyzer
@@ -166,6 +162,7 @@ sudo gem install colorls
 ## Alterando as configurações do ZSH e outros
 
 ```ssh
+cd ~/
 git clone git@github.com:danyelvarejao/dotfiles.git .dotfiles
 ```
 
