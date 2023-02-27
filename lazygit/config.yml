@@ -1,4 +1,10 @@
 gui:
+  showIcons: true
   theme:
     selectedLineBgColor:
       - reverse # set to `default` to have no background colour
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
