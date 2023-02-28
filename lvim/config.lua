@@ -87,6 +87,7 @@ lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'
 ------------------- others -----------------------
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.lualine.style = "default"
+lvim.builtin.terminal.open_mapping = "<M-c>"
 lvim.builtin.telescope.pickers.find_files.find_command = {
   'fd',
   '--type',
