@@ -31,6 +31,10 @@ lvim.keys.normal_mode['L'] = '$'
 lvim.keys.visual_mode['H'] = '^'
 lvim.keys.visual_mode['L'] = '$'
 
+-- Remap CTRL + i and CTRL + o
+lvim.keys.normal_mode['<C-i>'] = '<C-o>'
+lvim.keys.normal_mode['<C-o>'] = '<c-i>'
+
 -- Remap reundo
 lvim.keys.normal_mode['U'] = '<C-R>'
 
