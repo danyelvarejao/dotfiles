@@ -86,9 +86,10 @@ lvim.keys.visual_mode['C'] = '"_C'
 lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", 'Lazygit' }
 
 ------------------- others -----------------------
+lvim.builtin.lir.active = false
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.lualine.style = "default"
-lvim.builtin.terminal.open_mapping = "<M-c>"
+lvim.builtin.terminal.open_mapping = "<C-t>"
 lvim.builtin.telescope.pickers.find_files.find_command = {
   'fd',
   '--type',
