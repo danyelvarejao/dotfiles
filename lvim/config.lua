@@ -3,6 +3,13 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.relativenumber = true
 
+-- theme
+vim.g.tokyodark_transparent_background = false
+vim.g.tokyodark_enable_italic_comment = false
+vim.g.tokyodark_enable_italic = false
+vim.g.tokyodark_color_gamma = "1.0"
+lvim.colorscheme = "tokyodark"
+
 ------------------- general -----------------------
 lvim.log.level = "info"
 lvim.use_icons = true
@@ -73,15 +80,22 @@ lvim.keys.visual_mode['C'] = '"_C'
 -- Lazygit
 lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", 'Lazygit' }
 
-------------------- theme -----------------------
-lvim.colorscheme = "lunar"
-
 ------------------- others -----------------------
 lvim.builtin.treesitter.auto_install = true
+lvim.builtin.telescope.pickers.find_files.find_command = {
+  'fd',
+  '--type',
+  'f',
+  '--no-ignore-vcs',
+  '--color=never',
+  '--hidden',
+  '--follow',
+}
+-- lvim.builtin.lualine.sections
 
 ------------------- plugins -----------------------
 lvim.plugins = {
-  { "LunarVim/Colorschemes" },
+  { 'tiagovla/tokyodark.nvim' },
 }
 
 ------------------- autocmds -----------------------
