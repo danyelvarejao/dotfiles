@@ -2,6 +2,7 @@
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.relativenumber = true
+vim.opt.whichwrap = "b,s"
 
 -- theme
 vim.g.tokyodark_transparent_background = false
