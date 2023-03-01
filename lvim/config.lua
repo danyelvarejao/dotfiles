@@ -56,6 +56,11 @@ lvim.builtin.which_key.mappings['q'] = { ':BufferKill<CR>', 'Kill Current Buffer
 lvim.builtin.which_key.mappings['p'] = { ':Telescope find_files<CR>', 'Find File' }
 lvim.builtin.which_key.mappings['f'] = { ':Telescope live_grep<CR>', 'Live Grep' }
 lvim.builtin.which_key.mappings['si'] = { ':LvimReload<CR>', 'Reload' }
+lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", 'Lazygit' }
+lvim.lsp.buffer_mappings.normal_mode['<leader>a'] = { vim.lsp.buf.code_action, "Open code actions" }
+lvim.lsp.buffer_mappings.normal_mode['<leader>rn'] = { vim.lsp.buf.rename, "Rename" }
+lvim.lsp.buffer_mappings.normal_mode['<leader>gp'] = { vim.diagnostic.goto_prev, "Go to previous error" }
+lvim.lsp.buffer_mappings.normal_mode['<leader>gn'] = { vim.diagnostic.goto_next, "Go to next error" }
 
 -- Bufferline
 lvim.keys.normal_mode['<tab>'] = ':BufferLineCycleNext<CR>'
@@ -82,15 +87,6 @@ lvim.keys.visual_mode['c'] = '"_c'
 lvim.keys.normal_mode['C'] = '"_C'
 lvim.keys.visual_mode['C'] = '"_C'
 
--- Lazygit
-lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", 'Lazygit' }
-
--- LSP
-lvim.lsp.buffer_mappings.normal_mode['gp'] = { vim.diagnostic.goto_prev, "Go to previous error" }
-lvim.lsp.buffer_mappings.normal_mode['gn'] = { vim.diagnostic.goto_next, "Go to next error" }
-lvim.lsp.buffer_mappings.normal_mode['<leader>a'] = { vim.lsp.buf.code_action, "Open code actions" }
-lvim.lsp.buffer_mappings.normal_mode['<leader>rn'] = { vim.lsp.buf.rename, "Rename" }
-
 ------------------- builtin -----------------------
 lvim.builtin.lir.active = false
 lvim.builtin.treesitter.auto_install = true
@@ -110,7 +106,6 @@ lvim.builtin.telescope.pickers.find_files.find_command = {
 lvim.plugins = {
   { 'tiagovla/tokyodark.nvim' },
   { 'editorconfig/editorconfig-vim' },
-  { 'mg979/vim-visual-multi' },
 }
 
 ------------------- autocmds -----------------------
