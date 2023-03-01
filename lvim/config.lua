@@ -88,6 +88,8 @@ lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'
 -- LSP
 lvim.lsp.buffer_mappings.normal_mode['gp'] = { vim.diagnostic.goto_prev, "Go to previous error" }
 lvim.lsp.buffer_mappings.normal_mode['gn'] = { vim.diagnostic.goto_next, "Go to next error" }
+lvim.lsp.buffer_mappings.normal_mode['<leader>a'] = { vim.lsp.buf.code_action, "Open code actions" }
+lvim.lsp.buffer_mappings.normal_mode['<leader>rn'] = { vim.lsp.buf.rename, "Rename" }
 
 ------------------- builtin -----------------------
 lvim.builtin.lir.active = false
