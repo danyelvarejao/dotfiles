@@ -85,7 +85,7 @@ lvim.keys.visual_mode['C'] = '"_C'
 -- Lazygit
 lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", 'Lazygit' }
 
-------------------- others -----------------------
+------------------- builtin -----------------------
 lvim.builtin.lir.active = false
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.lualine.style = "default"
