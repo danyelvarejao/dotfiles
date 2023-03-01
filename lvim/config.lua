@@ -110,6 +110,7 @@ lvim.builtin.telescope.pickers.find_files.find_command = {
 lvim.plugins = {
   { 'tiagovla/tokyodark.nvim' },
   { 'editorconfig/editorconfig-vim' },
+  { 'mg979/vim-visual-multi' },
 }
 
 ------------------- autocmds -----------------------
