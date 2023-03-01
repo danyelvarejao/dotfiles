@@ -85,6 +85,10 @@ lvim.keys.visual_mode['C'] = '"_C'
 -- Lazygit
 lvim.builtin.which_key.mappings['lg'] = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", 'Lazygit' }
 
+-- LSP
+lvim.lsp.buffer_mappings.normal_mode['gp'] = { vim.diagnostic.goto_prev, "Go to previous error" }
+lvim.lsp.buffer_mappings.normal_mode['gn'] = { vim.diagnostic.goto_next, "Go to next error" }
+
 ------------------- builtin -----------------------
 lvim.builtin.lir.active = false
 lvim.builtin.treesitter.auto_install = true
