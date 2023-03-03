@@ -92,6 +92,8 @@ lvim.builtin.lir.active = false
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.lualine.style = "default"
 lvim.builtin.terminal.open_mapping = "<C-t>"
+lvim.builtin.cmp.mapping["<Tab>"] = nil
+lvim.builtin.cmp.mapping["<S-Tab>"] = nil
 lvim.builtin.telescope.pickers.find_files.find_command = {
   'fd',
   '--type',
