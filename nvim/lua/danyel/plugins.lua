@@ -90,9 +90,6 @@ return packer.startup(function(use)
   -- Neovim comment
   use 'numToStr/Comment.nvim'
 
-  -- Fast move lines and selections
-  use 'fedepujol/move.nvim'
-
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
 
