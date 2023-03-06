@@ -56,6 +56,9 @@ return packer.startup(function(use)
   use 'onsails/lspkind.nvim'
   use 'glepnir/lspsaga.nvim'
 
+  -- Easily install and manage LSP servers
+  use "williamboman/mason.nvim"
+
   -- LSP Format
   use 'jose-elias-alvarez/null-ls.nvim'
 
