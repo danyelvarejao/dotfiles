@@ -10,14 +10,15 @@ function close_current_buffer()
   vim.api.nvim_command('wincmd l')
 end
 
-vim.keymap.set('n', '<leader>bf',    ':BufferLinePick <CR>', {})
-vim.keymap.set('n', '<leader>bc',    ':BufferLinePickClose <CR>', {})
 vim.keymap.set('n', '<TAB>',         ':BufferLineCycleNext <CR>', {})
 vim.keymap.set('n', '<leader><TAB>', ':BufferLineCyclePrev <CR>', {})
-vim.keymap.set('n', '<leader>bml',   ':BufferLineMoveNext <CR>', {})
-vim.keymap.set('n', '<leader>bmh',   ':BufferLineMovePrev <CR>', {})
 vim.keymap.set('n', '<leader>q',     '<Cmd>lua close_current_buffer()<CR>', {})
 vim.keymap.set('n', '<leader>w',     ':w<CR>', {})
+
+-- vim.keymap.set('n', '<leader>bf',    ':BufferLinePick <CR>', {})
+-- vim.keymap.set('n', '<leader>bc',    ':BufferLinePickClose <CR>', {})
+-- vim.keymap.set('n', '<leader>bml',   ':BufferLineMoveNext <CR>', {})
+-- vim.keymap.set('n', '<leader>bmh',   ':BufferLineMovePrev <CR>', {})
 
 bufferline.setup {
   options = {
