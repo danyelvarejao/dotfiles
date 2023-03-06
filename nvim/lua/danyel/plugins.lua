@@ -75,9 +75,6 @@ return packer.startup(function(use)
   -- Color scheme
   use 'tiagovla/tokyodark.nvim'
 
-  -- Colorizer
-  use 'norcalli/nvim-colorizer.lua'
-
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
 
