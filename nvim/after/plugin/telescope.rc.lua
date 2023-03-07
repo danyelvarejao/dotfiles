@@ -13,16 +13,28 @@ if not telescope_actions_status_ok then
   return
 end
 
-vim.keymap.set('n', '<leader>p', telescope_buitin.find_files, {})
-vim.keymap.set('n', '<leader>f', telescope_buitin.live_grep, {})
--- vim.keymap.set('n', '<leader>fb', telescope_buitin.buffers, {})
--- vim.keymap.set('n', 'fh', telescope_buitin.help_tags, {})
+vim.keymap.set('n', '<leader>p',
+  function()
+    telescope_buitin.find_files({
+      no_ignore = false,
+      hidden = true
+    })
+  end
+)
+
+vim.keymap.set('n', '<leader>f',
+  function()
+    telescope_buitin.live_grep({
+      no_ignore = false,
+      hidden = true
+    })
+  end
+)
 
 telescope.setup{
   defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,
-    file_ignore_patterns = {".git/", ".cache", "%.o", "%.a", "%.out", "%.class", "%.pdf", "%.mkv", "%.mp4", "%.zip"},
     mappings = {
       -- map actions.which_key to <C-h> (default: <C-/>)
       -- actions.which_key shows the mappings for your picker,
@@ -44,17 +56,6 @@ telescope.setup{
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
-    find_files = {
-      find_command = {
-        'fd',
-        '--type',
-        'f',
-        '--no-ignore-vcs',
-        '--color=never',
-        '--hidden',
-        '--follow',
-      }
-    }
   },
   extensions = {
     -- Your extension configuration goes here:
