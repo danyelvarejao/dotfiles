@@ -161,7 +161,7 @@ sudo gem install colorls
 
 ## Git Delta (pretty diffs)
 ```
-https://github.com/dandavison/delta/releases/download/0.15.1/git-delta_0.15.1_amd64.deb
+wget https://github.com/dandavison/delta/releases/download/0.15.1/git-delta_0.15.1_amd64.deb
 sudo dpkg -i git-delta_0.15.1_amd64.deb
 ```
 
