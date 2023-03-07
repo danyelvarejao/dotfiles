@@ -30,6 +30,10 @@ telescope.setup{
       n = {
         ["q"] = telescope_actions.close
       },
+
+      i = {
+        ["<esc>"] = telescope_actions.close
+      },
     }
   },
   pickers = {
