@@ -58,6 +58,7 @@ return packer.startup(function(use)
 
   -- Easily install and manage LSP servers
   use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
 
   -- LSP Format
   use 'jose-elias-alvarez/null-ls.nvim'

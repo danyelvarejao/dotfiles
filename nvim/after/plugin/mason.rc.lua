@@ -3,6 +3,11 @@ if not status_ok then
   return
 end
 
+local status_ok, mason_lspconfig = pcall(require, 'mason-lspconfig')
+if not status_ok then
+  return
+end
+
 mason.setup({
   ui = {
     icons = {
@@ -11,4 +16,12 @@ mason.setup({
       package_uninstalled = "✗"
     }
   }
+})
+
+mason_lspconfig.setup({
+  ensure_installed = {
+    'lua_ls', 'rust_analyzer', 'yamlls', 'lemminx', 'volar', 'tsserver',
+    'tailwindcss', 'intelephense', 'jsonls', 'html',
+    'eslint', 'cssls', 'clangd', 'angularls'
+  },
 })
