@@ -115,19 +115,12 @@ sudo apt-get install neovim
 - Instalando LSP Servers
 
 ```
-git clone https://github.com/LuaLS/lua-language-server
-cd lua-language-server
-./make.sh
 npm i -g tree-sitter-cli
-npm i -g bash-language-server
-npm i -g vscode-langservers-extracted
-npm i -g typescript typescript-language-server
-npm i -g @tailwindcss/language-server
-npm i -g @prisma/language-server
-npm i -g graphql-language-service-cli
-sudo apt install clangd
-pip install pyright
-sudo apt install gcc g++ clang ninja-build
+npm i -g eslint_d
+```
+
+- Instalando Rust
+```
 cd ~/.local/bin
 curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
 chmod +x ~/.local/bin/rust-analyzer
