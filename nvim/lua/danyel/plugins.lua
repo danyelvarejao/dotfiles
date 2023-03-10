@@ -72,6 +72,9 @@ return packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/nvim-cmp'
 
+  -- Autopairs () {} [], etc
+  use 'windwp/nvim-autopairs'
+
   -- Telescope
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
