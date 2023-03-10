@@ -16,7 +16,6 @@ end
 vim.keymap.set('n', '<leader>p',
   function()
     telescope_buitin.find_files({
-      no_ignore = false,
       hidden = true
     })
   end
