@@ -100,6 +100,9 @@ return packer.startup(function(use)
   -- GitSigns
   use 'lewis6991/gitsigns.nvim'
 
+  -- Toggle Terminal
+  use 'akinsho/toggleterm.nvim'
+
   if packer_bootstrap then
     packer.sync()
   end
