@@ -760,6 +760,7 @@ selection:
 # in the order they were defined in.
 key_bindings:
   - { key: Back, mods: Control, chars: "\x17" }
+  - { key: Space, mods: Control, chars: "\x00" }
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
