@@ -39,7 +39,7 @@ nvim_tree.setup {
     mappings = {
       custom_only = false,
       list = {
-        -- user mappings go here
+        { key = { "<C-t>" }, action = "" },
       },
     },
     float = {
