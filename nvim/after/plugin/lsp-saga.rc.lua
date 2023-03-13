@@ -4,8 +4,10 @@ if not status_ok then
 end
 
 saga.setup({
-  code_action_lightbulb = {
+  lightbulb = {
     enable = false,
+    enable_in_insert = false,
+    sign = false,
   },
 })
 
