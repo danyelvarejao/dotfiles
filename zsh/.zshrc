@@ -123,14 +123,14 @@ alias prod="cd ~/Production"
 alias proj="cd ~/Projects"
 
 alias lg="lazygit"
-alias v="lvim"
-alias vim='lvim'
-alias vimconfig="lvim ~/.dotfiles/lvim/config.lua"
+alias v="nvim"
+alias vim='nvim'
+alias vimconfig="nvim ~/.dotfiles/nvim"
 alias dotfiles="cd ~/.dotfiles"
 alias lc='colorls -lA --sd'
 alias ls='colorls'
 
-export VISUAL='lvim'
+export VISUAL='nvim'
 export EDITOR=$VISUAL
 
 function ms() {
