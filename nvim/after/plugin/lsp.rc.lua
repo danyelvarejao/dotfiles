@@ -74,6 +74,13 @@ lspconfig.rust_analyzer.setup({
   capabilities = capabilities
 })
 
+lspconfig.clangd.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities
+})
+
 lspconfig.lua_ls.setup({
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
