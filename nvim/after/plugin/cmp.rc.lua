@@ -39,8 +39,12 @@ cmp.setup({
 
   -- LSPKind to icons in autocomplete
   formatting = {
-    format = lspkind.cmp_format({ with_text = true })
-  },
+    format = function(entry, vim_item)
+      -- Max 30 characters of autocomplete item name
+      vim_item.abbr = string.sub(vim_item.abbr, 1, 30)
+      return vim_item
+    end
+  }
 })
 
 -- Set configuration for specific filetype.
