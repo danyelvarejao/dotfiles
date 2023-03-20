@@ -4,103 +4,86 @@ for _, plugin in pairs(disabled_built_ins) do
   vim.g["loaded_" .. plugin] = 1
 end
 
--- Automatically install packer
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
+-- Automatically install lazy
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
     'git',
     'clone',
-    '--depth',
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path
-  })
-  vim.o.runtimepath = vim.fn.stdpath('data') .. '/site/pack/*/start/*,' .. vim.o.runtimepath
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  }
 end
-
--- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-  autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
+vim.opt.rtp:prepend(lazypath)
 
 -- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, 'packer')
+local status_ok, lazy = pcall(require, 'lazy')
 if not status_ok then
   return
 end
 
 -- Install plugins
-return packer.startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-
+return lazy.setup({
   -- Required of some plugins
-  use 'kyazdani42/nvim-web-devicons'
+  'kyazdani42/nvim-web-devicons',
 
   -- Syntax Highlighting
-  use {
+  {
     'nvim-treesitter/nvim-treesitter',
-    run = function()
+    build = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
       ts_update()
     end,
-  }
+  },
 
   -- LSP (Language Servers Protocol)
-  use 'neovim/nvim-lspconfig'
-  use 'onsails/lspkind.nvim'
-  use 'glepnir/lspsaga.nvim'
+  'neovim/nvim-lspconfig',
+  'onsails/lspkind.nvim',
+  'glepnir/lspsaga.nvim',
 
   -- Easily install and manage LSP servers
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
 
   -- CMP (Autocomplete)
-  use 'hrsh7th/cmp-cmdline'
-  use 'L3MON4D3/LuaSnip'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'hrsh7th/nvim-cmp'
+  'hrsh7th/cmp-cmdline',
+  'L3MON4D3/LuaSnip',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-buffer',
+  'saadparwaiz1/cmp_luasnip',
+  'hrsh7th/nvim-cmp',
 
   -- Autopairs () {} [], etc
-  use 'windwp/nvim-autopairs'
+  'windwp/nvim-autopairs',
 
   -- Telescope
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  'nvim-lua/plenary.nvim',
+  'nvim-telescope/telescope.nvim',
 
   -- Colorscheme
-  use 'ellisonleao/gruvbox.nvim'
+  'ellisonleao/gruvbox.nvim',
 
   -- Statusline
-  use 'nvim-lualine/lualine.nvim'
+  'nvim-lualine/lualine.nvim',
 
   -- File Tree
-  use 'kyazdani42/nvim-tree.lua'
+  'kyazdani42/nvim-tree.lua',
 
   -- Bufferline
-  use 'akinsho/bufferline.nvim'
+  'akinsho/bufferline.nvim',
 
   -- Neovim comment
-  use 'numToStr/Comment.nvim'
+  'numToStr/Comment.nvim',
 
   -- Lazygit
-  use 'kdheepak/lazygit.nvim'
+  'kdheepak/lazygit.nvim',
 
   -- GitSigns
-  use 'lewis6991/gitsigns.nvim'
+  'lewis6991/gitsigns.nvim',
 
   -- Toggle Terminal
-  use 'akinsho/toggleterm.nvim'
-
-  if packer_bootstrap then
-    packer.sync()
-  end
-end)
+  'akinsho/toggleterm.nvim',
+})
