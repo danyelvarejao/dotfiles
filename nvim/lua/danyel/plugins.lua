@@ -60,9 +60,6 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
 
-  -- LSP Format
-  use 'jose-elias-alvarez/null-ls.nvim'
-
   -- CMP (Autocomplete)
   use 'hrsh7th/cmp-cmdline'
   use 'L3MON4D3/LuaSnip'
