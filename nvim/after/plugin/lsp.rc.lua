@@ -30,8 +30,8 @@ capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 local servers = {
     'lua_ls', 'rust_analyzer', 'yamlls', 'volar', 'tsserver',
-    'tailwindcss', 'intelephense', 'jsonls', 'html', 'cssls', 'clangd',
-    'angularls', 'emmet_ls', 'eslint'
+    'tailwindcss', 'jsonls', 'html',
+    'cssls', 'clangd', 'emmet_ls', 'eslint'
 }
 
 for _, server in ipairs(servers) do
