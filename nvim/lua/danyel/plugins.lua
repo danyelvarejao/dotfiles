@@ -79,8 +79,8 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
 
-  -- Color scheme
-  use 'tiagovla/tokyodark.nvim'
+  -- Colorscheme
+  use 'ellisonleao/gruvbox.nvim'
 
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
