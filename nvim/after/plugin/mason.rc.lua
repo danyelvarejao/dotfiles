@@ -20,7 +20,7 @@ mason.setup({
 
 mason_lspconfig.setup({
   ensure_installed = {
-    'lua_ls', 'rust_analyzer', 'yamlls', 'lemminx', 'volar', 'tsserver',
+    'lua_ls', 'rust_analyzer', 'yamlls', 'volar', 'tsserver',
     'tailwindcss', 'intelephense', 'jsonls', 'html', 'cssls', 'clangd',
     'angularls'
   },
