@@ -28,57 +28,31 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-lspconfig.html.setup({
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  }
-})
+local servers = {
+    'lua_ls', 'rust_analyzer', 'yamlls', 'volar', 'tsserver',
+    'tailwindcss', 'intelephense', 'jsonls', 'html', 'cssls', 'clangd',
+    'angularls', 'emmet_ls', 'eslint'
+}
 
-lspconfig.cssls.setup({
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  }
-})
+for _, server in ipairs(servers) do
+  lspconfig[server].setup({
+    on_attach = function(client, bufnr)
+      on_attach(client, bufnr)
+    end,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    }
+  })
+end
 
-lspconfig.tsserver.setup({
+lspconfig.eslint.setup({
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
   end,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" },
-})
-
-lspconfig.tailwindcss.setup({
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities
-})
-
-lspconfig.rust_analyzer.setup({
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities
-})
-
-lspconfig.clangd.setup({
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities
 })
 
 lspconfig.lua_ls.setup({

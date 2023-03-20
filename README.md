@@ -110,7 +110,6 @@ sudo apt-get install neovim
 
 ```
 npm i -g tree-sitter-cli
-npm i -g eslint_d
 ```
 
 - Instalando Rust
