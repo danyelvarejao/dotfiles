@@ -83,7 +83,4 @@ return lazy.setup({
 
   -- GitSigns
   'lewis6991/gitsigns.nvim',
-
-  -- Toggle Terminal
-  'akinsho/toggleterm.nvim',
 })
