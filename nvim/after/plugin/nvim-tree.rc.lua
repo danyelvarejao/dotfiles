@@ -12,9 +12,6 @@ nvim_tree.setup {
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
-  ignore_buffer_on_setup = false,
-  open_on_setup = false,
-  open_on_setup_file = false,
   open_on_tab = false,
   ignore_buf_on_tab_change = {},
   sort_by = "name",
@@ -23,7 +20,7 @@ nvim_tree.setup {
   sync_root_with_cwd = false,
   reload_on_bufenter = false,
   respect_buf_cwd = false,
-  on_attach = "disable",
+  on_attach = "default",
   remove_keymaps = false,
   select_prompts = false,
   view = {
@@ -36,12 +33,6 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
     signcolumn = "yes",
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = { "<C-t>" }, action = "" },
-      },
-    },
     float = {
       enable = false,
       open_win_config = {
@@ -121,7 +112,6 @@ nvim_tree.setup {
     update_root = false,
     ignore_list = {},
   },
-  ignore_ft_on_setup = {},
   system_open = {
     cmd = "",
     args = {},
