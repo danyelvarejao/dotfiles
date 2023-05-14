@@ -51,19 +51,6 @@ nmap N Nzz
 nmap <C-d> <C-d>zz
 nmap <C-u> <C-u>zz
 
-" Paste without yank
-vnoremap p "0p
-
-" Delete letter in normal mode without yank
-nnoremap x "_x
-nnoremap X "_X
-
-" Clear without yank
-nnoremap c "_c
-vnoremap c "_c
-nnoremap C "_C
-vnoremap C "_C
-
 " Faster movement to end and beginning of the line
 nnoremap L $
 nnoremap H ^
