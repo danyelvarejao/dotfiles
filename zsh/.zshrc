@@ -12,9 +12,12 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 export LOCAL="$HOME/.local/bin"
 export LUA="$HOME/Others/lua-language-server/bin"
+export FLUTTER="$HOME/Others/flutter/bin"
 export RUST="$HOME/.cargo/bin"
+export ANDROID_HOME="$HOME/Others/android"
+export PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 
-export PATH="$PATH:$LOCAL:$LUA:$RUST"
+export PATH="$PATH:$LOCAL:$LUA:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
