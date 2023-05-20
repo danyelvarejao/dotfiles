@@ -31,6 +31,7 @@ map <Leader>v       <Action>(ShowErrorDescription)
 map <Leader>H       <Action>(Replace)
 map <Leader>h       <Action>(ReplaceInPath)
 map <Leader>d       <Action>(EditorDuplicate)
+map <Leader>g       <Action>(Generate)
 
 " map <C-t>           <Action>(ActivateTerminalToolWindow)
 " map <C-w>           <Action>(HideAllWindows)
