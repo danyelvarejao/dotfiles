@@ -16,8 +16,9 @@ export FLUTTER="$HOME/Others/flutter/bin"
 export RUST="$HOME/.cargo/bin"
 export ANDROID_HOME="$HOME/Others/android"
 export PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
+export DART_PUB="$HOME/.pub-cache/bin"
 
-export PATH="$PATH:$LOCAL:$LUA:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS"
+export PATH="$PATH:$LOCAL:$LUA:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
