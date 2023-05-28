@@ -23,6 +23,7 @@ set visualbell
 map <Leader>p       <Action>(GotoFile)
 map <Leader>o       <Action>(SearchEverywhere)
 map <Leader>f       <Action>(FindInPath)
+map <Leader>F       <Action>(ReformatCode)
 map <Leader>r       <Action>(RenameElement)
 map <Leader>R       <Action>(RenameInPath)
 map <Leader>a       <Action>(ShowIntentionActions)
