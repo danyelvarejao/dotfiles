@@ -11,14 +11,15 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export LOCAL="$HOME/.local/bin"
-export LUA="$HOME/Others/lua-language-server/bin"
-export FLUTTER="$HOME/Others/flutter/bin"
 export RUST="$HOME/.cargo/bin"
-export ANDROID_HOME="$HOME/Others/android"
 export PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 export DART_PUB="$HOME/.pub-cache/bin"
 
-export PATH="$PATH:$LOCAL:$LUA:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB"
+export ANDROID_HOME="$HOME/Others/android"
+export FLUTTER="$HOME/Others/flutter/bin"
+export SASS="$HOME/Others/dart-sass"
+
+export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
