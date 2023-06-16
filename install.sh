@@ -22,4 +22,4 @@ ln -s -f $PWD/tmux/.tmux.conf ~/.tmux.conf
 cp $PWD/tmux/.tmux.conf.local ~/.tmux.conf.local
 
 # Alacritty
-ln -sf $PWD/alacritty/alacritty.yml ~/.alacritty.yml
+ln -sf $PWD/alacritty/alacritty.toml ~/.alacritty.toml
