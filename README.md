@@ -139,12 +139,6 @@ sudo mv /tmp/win32yank.exe /usr/local/bin/
 sudo apt install tmux
 ```
 
-## Instalando Colorls
-```
-sudo apt install ruby ruby-dev
-sudo gem install colorls
-```
-
 ## Diff So Fancy (pretty diffs)
 ```
 sudo snap install diff-so-fancy

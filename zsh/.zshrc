@@ -131,8 +131,6 @@ alias v="nvim"
 alias vim='nvim'
 alias vimconfig="nvim ~/.dotfiles/nvim"
 alias dotfiles="cd ~/.dotfiles"
-alias lc='colorls -lA --sd'
-alias ls='colorls'
 
 export VISUAL='nvim'
 export EDITOR=$VISUAL
