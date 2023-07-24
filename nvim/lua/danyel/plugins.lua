@@ -85,4 +85,7 @@ return lazy.setup({
 
   -- GitSigns
   'lewis6991/gitsigns.nvim',
+
+  -- TODO Highlight
+  'folke/todo-comments.nvim',
 })
