@@ -41,7 +41,6 @@ return lazy.setup({
   -- LSP (Language Servers Protocol)
   'neovim/nvim-lspconfig',
   'onsails/lspkind.nvim',
-  'glepnir/lspsaga.nvim',
 
   -- Easily install and manage LSP servers
   'williamboman/mason.nvim',
