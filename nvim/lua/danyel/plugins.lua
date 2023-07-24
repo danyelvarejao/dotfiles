@@ -37,6 +37,7 @@ return lazy.setup({
       ts_update()
     end,
   },
+  'nvim-treesitter/nvim-treesitter-context',
 
   -- LSP (Language Servers Protocol)
   'neovim/nvim-lspconfig',
