@@ -11,6 +11,8 @@ end
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  client.server_capabilities.semanticTokensProvider = nil
+
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
 
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
@@ -30,9 +32,9 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 local servers = {
-    'lua_ls', 'rust_analyzer', 'yamlls', 'volar', 'tsserver',
-    'tailwindcss', 'jsonls', 'html',
-    'cssls', 'clangd', 'emmet_ls', 'eslint'
+  'lua_ls', 'rust_analyzer', 'yamlls', 'volar', 'tsserver',
+  'tailwindcss', 'jsonls', 'html',
+  'cssls', 'clangd', 'emmet_ls', 'eslint'
 }
 
 for _, server in ipairs(servers) do

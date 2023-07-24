@@ -64,7 +64,7 @@ return lazy.setup({
   'nvim-telescope/telescope.nvim',
 
   -- Colorscheme
-  'navarasu/onedark.nvim',
+  'tiagovla/tokyodark.nvim',
 
   -- Indent Guides
   'lukas-reineke/indent-blankline.nvim',
