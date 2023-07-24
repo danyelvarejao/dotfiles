@@ -66,9 +66,6 @@ return lazy.setup({
   -- Colorscheme
   'tiagovla/tokyodark.nvim',
 
-  -- Indent Guides
-  'lukas-reineke/indent-blankline.nvim',
-
   -- Statusline
   'nvim-lualine/lualine.nvim',
 
