@@ -63,7 +63,7 @@ return lazy.setup({
   'nvim-telescope/telescope.nvim',
 
   -- Colorscheme
-  'tiagovla/tokyodark.nvim',
+  'navarasu/onedark.nvim',
 
   -- Statusline
   'nvim-lualine/lualine.nvim',
