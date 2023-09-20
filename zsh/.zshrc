@@ -14,12 +14,13 @@ export LOCAL="$HOME/.local/bin"
 export RUST="$HOME/.cargo/bin"
 export PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 export DART_PUB="$HOME/.pub-cache/bin"
+export BUN_INSTALL="$HOME/.bun/bin"
 
 export ANDROID_HOME="$HOME/Others/android"
 export FLUTTER="$HOME/Others/flutter/bin"
 export SASS="$HOME/Others/dart-sass"
 
-export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS"
+export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS:$BUN_INSTALL"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -139,3 +140,6 @@ export EDITOR=$VISUAL
 function ms() {
   date +%s
 }
+
+# bun completions
+[ -s "/home/danyel/.bun/_bun" ] && source "/home/danyel/.bun/_bun"
