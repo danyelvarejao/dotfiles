@@ -11,8 +11,8 @@ vim.keymap.set('n', 'U', '<C-R>')
 vim.keymap.set('', '{', '}')
 vim.keymap.set('', '}', '{')
 
--- Clear search highlighting with <esc>
-vim.keymap.set('n', '<esc>', ':nohl<CR>')
+-- Clear search highlighting
+vim.keymap.set('n', '<leader>nl', ':nohl<CR>')
 
 -- Move around splits using Ctrl + {h,j,k,l}
 vim.keymap.set('n', '<C-h>', '<C-w>h')
@@ -47,12 +47,3 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 -- Remove letter without yank
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'X', '"_X')
-
--- Delete a backward word in normal mode without yank
-vim.keymap.set('n', 'dw', 'vb"_d')
-
--- Clear without yank
-vim.keymap.set('n', 'c', '"_c')
-vim.keymap.set('v', 'c', '"_c')
-vim.keymap.set('n', 'C', '"_C')
-vim.keymap.set('v', 'C', '"_C')
