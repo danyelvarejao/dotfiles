@@ -143,3 +143,6 @@ function ms() {
 
 # bun completions
 [ -s "/home/danyel/.bun/_bun" ] && source "/home/danyel/.bun/_bun"
+
+# bun completions
+[ -s "/home/danyel/.bun/bin/_bun" ] && source "/home/danyel/.bun/bin/_bun"
