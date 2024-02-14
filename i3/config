@@ -167,12 +167,13 @@ bindsym $mod+Shift+r restart
 # Monitors
 exec --no-startup-id xrandr --output $primaryMonitor --mode 1920x1080 --rate 240 --right-of $secondaryMonitor
 
-# Mouse Speed
+# Mouse
 exec --no-startup-id xinput set-prop "10" "libinput Accel Speed" -0.7
 
-# Keyboard Repeat Rate
+# Keyboard
 exec --no-startup-id xset r rate 150 50
+exec --no-startup-id setxkbmap -model abnt2 -layout us -variant intl
 
 bar {
-        status_command i3status
+    status_command i3status
 }
