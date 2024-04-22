@@ -28,11 +28,11 @@ TERM = "xterm-256color"
 size = 11.5
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "Monaspace Neon"
 style = "Bold"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Monaspace Neon"
 style = "Regular"
 
 [[keyboard.bindings]]

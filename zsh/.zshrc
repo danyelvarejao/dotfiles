@@ -15,13 +15,13 @@ export RUST="$HOME/.cargo/bin"
 export PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 export DART_PUB="$HOME/.pub-cache/bin"
 export BUN_INSTALL="$HOME/.bun/bin"
+export ANDROID_HOME="$HOME/Others/android"
+export FLUTTER="$HOME/Others/flutter/bin"
+export SASS="$HOME/Others/dart-sass"
+export GOLANG="$HOME/Others/go/bin"
+export LUA_LANGUAGE_SERVER="$HOME/Others/lua-language-server/bin"
 
-export ANDROID_HOME="$HOME/others/android"
-export FLUTTER="$HOME/others/flutter/bin"
-export SASS="$HOME/others/dart-sass"
-export GOLANG="$HOME/others/go/bin"
-
-export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS:$BUN_INSTALL:$GOLANG"
+export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS:$BUN_INSTALL:$GOLANG:$LUA_LANGUAGE_SERVER"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
