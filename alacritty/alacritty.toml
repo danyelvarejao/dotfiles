@@ -25,14 +25,14 @@ white = "0xfff1f3"
 TERM = "xterm-256color"
 
 [font]
-size = 11.5
+size = 12
 
 [font.bold]
-family = "Monaspace Neon"
+family = "JetbrainsMono Nerd Font"
 style = "Bold"
 
 [font.normal]
-family = "Monaspace Neon"
+family = "JetbrainsMono Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]
@@ -55,3 +55,8 @@ title = "Terminal"
 [window.padding]
 x = 0
 y = 0
+
+[[hints.enabled]]
+command = ""
+hyperlinks = true
+mouse.enabled = false
