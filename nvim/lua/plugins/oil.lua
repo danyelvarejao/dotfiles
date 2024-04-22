@@ -23,7 +23,7 @@ return {
           ["<C-p>"] = "actions.preview",
           ["q"] = "actions.close",
           -- ["<C-r>"] = "actions.refresh",
-          -- ["-"] = "actions.parent",
+          ["<backspace>"] = "actions.parent",
           -- ["_"] = "actions.open_cwd",
           -- ["`"] = "actions.cd",
           -- ["~"] = "actions.tcd",
@@ -33,6 +33,11 @@ return {
         },
         view_options = {
           show_hidden = true,
+        },
+        float = {
+          padding = 2,
+          max_width = 70,
+          max_height = 20,
         },
       })
     end,
