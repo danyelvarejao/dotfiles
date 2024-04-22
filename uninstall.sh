@@ -26,4 +26,4 @@ rm -rf ~/.tmux.conf
 rm -rf ~/.tmux.conf.local
 
 # Remove Alacritty
-rm -rf ~/.alacritty.yml
+rm -rf ~/.config/alacritty/alacritty.yml

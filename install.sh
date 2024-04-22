@@ -22,7 +22,7 @@ ln -s -f $PWD/tmux/.tmux.conf ~/.tmux.conf
 cp $PWD/tmux/.tmux.conf.local ~/.tmux.conf.local
 
 # Alacritty
-ln -sf $PWD/alacritty/alacritty.toml ~/.alacritty.toml
+ln -sf $PWD/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 # i3wm
 ln -sf $PWD/i3/config ~/.config/i3/config
