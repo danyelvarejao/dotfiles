@@ -15,7 +15,6 @@ local M = {}
 
 -- Map Oil to <leader>e
 nnoremap("<leader>e", function()
-  print("a")
   require("oil").toggle_float()
 end)
 
@@ -33,6 +32,8 @@ nnoremap("<C-o>", "<C-o>zz")
 nnoremap("%", "%zz")
 nnoremap("*", "*zz")
 nnoremap("#", "#zz")
+nnoremap("<C-i>", "<C-o>")
+nnoremap("<C-o>", "<C-i>")
 
 -- Press 'H', 'L' to jump to start/end of a line (first/last char)
 nnoremap("L", "$")
