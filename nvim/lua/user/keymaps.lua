@@ -15,8 +15,8 @@ local M = {}
 
 -- Map Oil to <leader>e
 nnoremap("<leader>e", function()
-	print("a")
-	require("oil").toggle_float()
+  print("a")
+  require("oil").toggle_float()
 end)
 
 -- Center buffer while navigating
@@ -67,51 +67,51 @@ nnoremap("<leader>nl", "<cmd>noh<cr>")
 
 -- Goto next diagnostic of any severity
 nnoremap("gn", function()
-	vim.diagnostic.goto_next({})
-	vim.api.nvim_feedkeys("zz", "n", false)
+  vim.diagnostic.goto_next({})
+  vim.api.nvim_feedkeys("zz", "n", false)
 end)
 
 -- Goto previous diagnostic of any severity
 nnoremap("gp", function()
-	vim.diagnostic.goto_prev({})
-	vim.api.nvim_feedkeys("zz", "n", false)
+  vim.diagnostic.goto_prev({})
+  vim.api.nvim_feedkeys("zz", "n", false)
 end)
 
 -- Telescope keybinds --
 nnoremap("<leader>p", function()
-	require("telescope.builtin").find_files({ hidden = true })
+  require("telescope.builtin").find_files({ hidden = true })
 end, { desc = "[S]earch [F]iles" })
 nnoremap("<leader>f", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
 
 -- LSP Keybinds (exports a function to be used in ../../after/plugin/lsp.lua b/c we need a reference to the current buffer) --
 M.map_lsp_keybinds = function(buffer_number)
-	nnoremap("<leader>r", vim.lsp.buf.rename, { desc = "LSP: [R]e[n]ame", buffer = buffer_number })
-	nnoremap("<leader>a", vim.lsp.buf.code_action, { desc = "LSP: [C]ode [A]ction", buffer = buffer_number })
+  nnoremap("<leader>r", vim.lsp.buf.rename, { desc = "LSP: [R]e[n]ame", buffer = buffer_number })
+  nnoremap("<leader>a", vim.lsp.buf.code_action, { desc = "LSP: [C]ode [A]ction", buffer = buffer_number })
 
-	nnoremap("gd", vim.lsp.buf.definition, { desc = "LSP: [G]oto [D]efinition", buffer = buffer_number })
-	nnoremap("gD", vim.lsp.buf.declaration, { desc = "LSP: [G]oto [D]eclaration", buffer = buffer_number })
+  nnoremap("gd", vim.lsp.buf.definition, { desc = "LSP: [G]oto [D]efinition", buffer = buffer_number })
+  nnoremap("gD", vim.lsp.buf.declaration, { desc = "LSP: [G]oto [D]eclaration", buffer = buffer_number })
 
-	-- Telescope LSP keybinds --
-	nnoremap(
-		"gr",
-		require("telescope.builtin").lsp_references,
-		{ desc = "LSP: [G]oto [R]eferences", buffer = buffer_number }
-	)
+  -- Telescope LSP keybinds --
+  nnoremap(
+    "gr",
+    require("telescope.builtin").lsp_references,
+    { desc = "LSP: [G]oto [R]eferences", buffer = buffer_number }
+  )
 
-	nnoremap(
-		"gi",
-		require("telescope.builtin").lsp_implementations,
-		{ desc = "LSP: [G]oto [I]mplementation", buffer = buffer_number }
-	)
+  nnoremap(
+    "gi",
+    require("telescope.builtin").lsp_implementations,
+    { desc = "LSP: [G]oto [I]mplementation", buffer = buffer_number }
+  )
 
-	-- See `:help K` for why this keymap
-	nnoremap("K", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation", buffer = buffer_number })
-	inoremap("<C-k>", vim.lsp.buf.signature_help, { desc = "LSP: Signature Documentation", buffer = buffer_number })
+  -- See `:help K` for why this keymap
+  nnoremap("K", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation", buffer = buffer_number })
+  inoremap("<C-k>", vim.lsp.buf.signature_help, { desc = "LSP: Signature Documentation", buffer = buffer_number })
 end
 
 -- Open Copilot panel
 nnoremap("<leader>oc", function()
-	require("copilot.panel").open({})
+  require("copilot.panel").open({})
 end, { desc = "[O]pen [C]opilot panel" })
 
 -- Press 'H', 'L' to jump to start/end of a line (first/last char)
@@ -124,15 +124,14 @@ vnoremap("<A-k>", ":m '<-2<CR>gv=gv")
 
 -- Reselect the last visual selection
 xnoremap("<", function()
-	-- Move selected text up/down in visual mode
-	vim.cmd("normal! <<")
-	vim.cmd("normal! gv")
+  -- Move selected text up/down in visual mode
+  vim.cmd("normal! <<")
+  vim.cmd("normal! gv")
 end)
 
 xnoremap(">", function()
-	vim.cmd("normal! >>")
-	vim.cmd("normal! gv")
+  vim.cmd("normal! >>")
+  vim.cmd("normal! gv")
 end)
 
 return M
-
