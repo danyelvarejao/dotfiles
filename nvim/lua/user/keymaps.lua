@@ -27,13 +27,9 @@ nnoremap("N", "Nzz")
 nnoremap("n", "nzz")
 nnoremap("G", "Gzz")
 nnoremap("gg", "ggzz")
-nnoremap("<C-i>", "<C-i>zz")
-nnoremap("<C-o>", "<C-o>zz")
 nnoremap("%", "%zz")
 nnoremap("*", "*zz")
 nnoremap("#", "#zz")
-nnoremap("<C-i>", "<C-o>")
-nnoremap("<C-o>", "<C-i>")
 
 -- Press 'H', 'L' to jump to start/end of a line (first/last char)
 nnoremap("L", "$")
@@ -80,9 +76,11 @@ end)
 
 -- Telescope keybinds --
 nnoremap("<leader>p", function()
-  require("telescope.builtin").find_files({ hidden = true })
+  require("telescope.builtin").find_files({ no_ignore = false, hidden = true })
 end, { desc = "[S]earch [F]iles" })
-nnoremap("<leader>f", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
+nnoremap("<leader>f", function()
+  require("telescope.builtin").live_grep({ additional_args = { "--hidden" } })
+end, { desc = "[S]earch by [G]rep" })
 
 -- LSP Keybinds (exports a function to be used in ../../after/plugin/lsp.lua b/c we need a reference to the current buffer) --
 M.map_lsp_keybinds = function(buffer_number)

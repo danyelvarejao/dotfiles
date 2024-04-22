@@ -22,6 +22,7 @@ return {
           -- ["<C-t>"] = "actions.select_tab",
           ["<C-p>"] = "actions.preview",
           ["q"] = "actions.close",
+          ["<esc>"] = "actions.close",
           -- ["<C-r>"] = "actions.refresh",
           ["<backspace>"] = "actions.parent",
           -- ["_"] = "actions.open_cwd",

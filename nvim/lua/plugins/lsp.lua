@@ -56,6 +56,13 @@ return {
       local on_attach = function(_client, buffer_number)
         -- Pass the current buffer to map lsp keybinds
         map_lsp_keybinds(buffer_number)
+
+        if (_client.name == "eslint") then
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = buffer_number,
+            command = "EslintFixAll",
+          })
+        end
       end
 
       -- LSP servers and clients are able to communicate to each other what features they support.
@@ -78,12 +85,13 @@ return {
         cssls = {},
         gleam = {},
         eslint = {
-          cmd = { "vscode-eslint-language-server", "--stdio", "--max-old-space-size=12288" },
+          cmd = { "vscode-eslint-language-server", "--stdio" },
           settings = {
-            format = false,
+            format = true,
           },
         },
         html = {},
+        emmet_ls = {},
         jsonls = {},
         lua_ls = {
           settings = {
@@ -109,9 +117,6 @@ return {
         sqlls = {},
         tailwindcss = {},
         tsserver = {
-          settings = {
-            maxTsServerMemory = 12288,
-          },
           handlers = {
             ["textDocument/publishDiagnostics"] = vim.lsp.with(
               tsserver_on_publish_diagnostics_override,
@@ -175,24 +180,25 @@ return {
       })
     end,
   },
-  {
-    "stevearc/conform.nvim",
-    event = { "BufWritePre" },
-    cmd = { "ConformInfo" },
-    opts = {
-      notify_on_error = false,
-      format_on_save = {
-        async = true,
-        timeout_ms = 500,
-        lsp_fallback = true,
-      },
-      formatters_by_ft = {
-        javascript = { { "prettierd", "prettier" } },
-        typescript = { { "prettierd", "prettier" } },
-        typescriptreact = { { "prettierd", "prettier" } },
-        lua = { "stylua" },
-      },
-    },
-  },
+  -- {
+  --   "stevearc/conform.nvim",
+  --   event = { "BufWritePre" },
+  --   cmd = { "ConformInfo" },
+  --   opts = {
+  --     notify_on_error = false,
+  --     format_on_save = {
+  --       async = true,
+  --       timeout_ms = 500,
+  --       lsp_fallback = true,
+  --     },
+  --     formatters_by_ft = {
+  --       -- javascript = { { "prettierd", "prettier" } },
+  --       -- typescript = { { "prettierd", "prettier" } },
+  --       -- typescriptreact = { { "prettierd", "prettier" } },
+  --       lua = { "stylua" },
+  --       -- html = { "prettierd", "prettier" }
+  --     },
+  --   },
+  -- },
 }
 
