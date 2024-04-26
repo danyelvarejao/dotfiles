@@ -7,13 +7,14 @@ export RUST="$HOME/.cargo/bin"
 export PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 export DART_PUB="$HOME/.pub-cache/bin"
 export BUN_INSTALL="$HOME/.bun/bin"
-export ANDROID_HOME="$HOME/Others/android"
+export ANDROID_HOME="$HOME/Android/Sdk"
 export FLUTTER="$HOME/Others/flutter/bin"
 export SASS="$HOME/Others/dart-sass"
 export GOLANG="$HOME/Others/go/bin"
 export LUA_LANGUAGE_SERVER="$HOME/Others/lua-language-server/bin"
+export CHROME_EXECUTABLE="/usr/bin/firefox"
 
-export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS:$BUN_INSTALL:$GOLANG:$LUA_LANGUAGE_SERVER"
+export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS:$BUN_INSTALL:$GOLANG:$LUA_LANGUAGE_SERVER:$CHROME_EXECUTABLE"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
