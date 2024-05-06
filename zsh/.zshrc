@@ -2,19 +2,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export LOCAL="$HOME/.local/bin"
-export RUST="$HOME/.cargo/bin"
-export PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-export DART_PUB="$HOME/.pub-cache/bin"
-export BUN_INSTALL="$HOME/.bun/bin"
-export ANDROID_HOME="$HOME/Android/Sdk"
-export FLUTTER="$HOME/Others/flutter/bin"
-export SASS="$HOME/Others/dart-sass"
-export GOLANG="$HOME/Others/go/bin"
-export LUA_LANGUAGE_SERVER="$HOME/Others/lua-language-server/bin"
-export CHROME_EXECUTABLE="/usr/bin/firefox"
 
-export PATH="$PATH:$LOCAL:$FLUTTER:$RUST:$ANDROID_HOME:$PLATFORM_TOOLS:$DART_PUB:$SASS:$BUN_INSTALL:$GOLANG:$LUA_LANGUAGE_SERVER:$CHROME_EXECUTABLE"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
+export PATH="$HOME/.pub-cache/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
+export PATH="$HOME/Others/flutter/bin:$PATH"
+export PATH="$HOME/Others/dart-sass:$PATH"
+export PATH="$HOME/Others/go/bin:$PATH"
+export PATH="$HOME/Others/lua-language-server/bin:$PATH"
+export PATH="/usr/bin/firefox:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
