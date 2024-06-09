@@ -14,9 +14,6 @@ rm -rf ~/.cache/nvim
 rm -rf $PWD/nvim/plugin
 rm -rf $PWD/nvim/undos
 
-# Remove LunarVim Configs
-rm -rf ~/.config/lvim
-
 # Remove IdeaVIM Configs
 rm -rf ~/.ideavimrc
 rm -rf ~/.vimrc

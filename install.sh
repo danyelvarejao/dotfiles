@@ -10,9 +10,6 @@ ln -sf $PWD/lazygit ~/.config/lazygit
 # NeoVIM Configs
 ln -sf $PWD/nvim ~/.config/nvim
 
-# LunarVim Configs
-ln -sf $PWD/lvim ~/.config/lvim
-
 # IdeaVIM Configs
 ln -sf $PWD/.ideavimrc ~/.ideavimrc
 ln -sf $PWD/.vimrc ~/.vimrc
