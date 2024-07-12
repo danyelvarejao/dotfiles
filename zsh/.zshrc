@@ -34,6 +34,8 @@ alias dev="cd ~/Development"
 alias prod="cd ~/Production"
 alias proj="cd ~/Projects"
 alias work="cd ~/Workspace"
+alias sail="./vendor/bin/sail"
+alias pnpx='pnpm dlx'
 
 alias lg="lazygit"
 alias v="nvim"
