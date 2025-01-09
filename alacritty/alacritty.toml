@@ -1,6 +1,5 @@
 [shell]
-program = "/bin/zsh"
-args = ["-l"]
+program = "ubuntu"
 
 [colors.primary]
 background = "0x000000"
@@ -60,7 +59,6 @@ title = "Terminal"
 x = 0
 y = 0
 
-[[hints.enabled]]
-command = ""
-hyperlinks = true
-mouse.enabled = false
+[window.dimensions]
+columns = 120
+lines = 30
