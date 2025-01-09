@@ -55,8 +55,6 @@ function ms() {
 
 # bun completions
 [ -s "/home/danyel/.bun/bin/_bun" ] && source "/home/danyel/.bun/bin/_bun"
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
 export EDITOR="code --wait"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/openssl-1.1.1q/"
 
