@@ -12,8 +12,9 @@ export PATH="$HOME/Others/flutter/bin:$PATH"
 export PATH="$HOME/Others/dart-sass:$PATH"
 export PATH="$HOME/Others/go/bin:$PATH"
 export PATH="$HOME/Others/lua-language-server/bin:$PATH"
-export PATH="/usr/bin/firefox:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export PATH="/usr/bin/firefox:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -58,9 +59,6 @@ function ms() {
 export EDITOR="code --wait"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/openssl-1.1.1q/"
 
-# Golang
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
 # pnpm
 export PNPM_HOME="/home/danyel/.local/share/pnpm"
 case ":$PATH:" in
