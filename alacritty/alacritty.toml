@@ -1,0 +1,6 @@
+[font]
+normal = { family = "JetbrainsMono Nerd Font" }
+
+[window]
+dimensions = { columns = 110, lines = 30 }
+position = { x = 2120, y = 1110 }

@@ -3,8 +3,3 @@ gui:
   theme:
     selectedLineBgColor:
       - reverse # set to `default` to have no background colour
-
-git:
-  paging:
-    colorArg: always
-    pager: diff-so-fancy
