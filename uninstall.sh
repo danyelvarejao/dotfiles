@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# i3wm
+rm -rf ~/.config/i3
+
 # Alacritty
 rm -rf ~/.config/alacritty
 

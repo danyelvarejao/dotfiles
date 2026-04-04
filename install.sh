@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# i3wm
+ln -sf $PWD/i3 ~/.config/i3
+
 # Alacritty
 ln -sf $PWD/alacritty ~/.config/alacritty
 
